@@ -25,9 +25,25 @@ insert dbo.Customer values (N'Lê Bảo Phúc', N'Đà Nẵng, Việt Nam', '090
 insert dbo.Customer values (N'Hoàng Trọng Quân', N'Đà Nẵng, Việt Nam', '')
 insert dbo.Customer values (N'Nguyễn Đặng Hoàng Lâm', N'Đà Nẵng, Việt Nam', '')
 
-insert dbo.Product values (N'Pug', N'Pug', N'Dog', 10, 10000)
-insert dbo.Product values (N'Cỏ', N'Cỏ', N'Dog', 5, 10000)
-insert dbo.Product values (N'Betta', N'Betta', N'Fish', 10, 20000)
+insert dbo.Product values (N'Betta', N'Betta', N'Fish', 300, 30000)
+insert dbo.Product values (N'Goldfish', N'Goldfish', N'Fish', 100, 20000)
+insert dbo.Product values (N'Angelfish', N'Angelfish', N'Fish', 100, 20000)
+insert dbo.Product values (N'Wakin Goldfish', N'Goldfish', N'Fish', 200, 30000)
+insert dbo.Product values (N'Half Black Angelfish', N'Angelfish', N'Fish', 300, 40000)
+
+insert dbo.Product values (N'Autralian Silky Terrier', N'Terrier', N'Dog', 50, 50000)
+insert dbo.Product values (N'Autralian Terrier', N'Terrier', N'Dog', 100, 40000)
+insert dbo.Product values (N'German Shepherds', N'Becgie', N'Dog', 200, 50000)
+insert dbo.Product values (N'Labrador Retriver', N'Retriver', N'Dog', 250, 50000)
+
+insert dbo.Product values (N'Mumbai Cat', N'Cat', N'Cat', 50, 50000)
+insert dbo.Product values (N'The American Bobtail', N'Cat', N'Cat', 200, 40000)
+
+insert dbo.Product values (N'Parrotlets', N'Bird', N'Bird', 100, 70000)
+insert dbo.Product values (N'Hyacinth Macaws', N'Bird', N'Bird', 200, 50000)
+insert dbo.Product values (N'Quaker', N'Bird', N'Bird', 100, 30000)
+insert dbo.Product values (N'Cockatoo', N'Bird', N'Bird', 400, 60000)
+insert dbo.Product values (N'Conure', N'Bird', N'Bird', 300, 40000)
 
 SELECT CashId, TransactionNo, Pid, Pname, Quantity, Price, Total, c.Cname, Cashier 
                                     FROM dbo.TemporaryData AS cash LEFT JOIN dbo.Customer c ON cash.Cid = c.Cid 
