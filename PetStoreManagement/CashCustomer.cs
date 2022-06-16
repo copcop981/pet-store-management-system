@@ -72,6 +72,7 @@ namespace PetStoreManagement
                 cm.ExecuteNonQuery();
                 cn.Close();
                 cashForm.loadCashTempDataList();
+                cashForm.btnCash.Enabled = true;
                 Dispose();
             }
         }
@@ -108,6 +109,10 @@ namespace PetStoreManagement
                 }
                 rd.Close();
                 cn.Close();
+                if (gridCustomer.Rows.Count == 0)
+                    picBoxNoItemsFound.Visible = true;
+                else
+                    picBoxNoItemsFound.Visible = false;
             }
             catch (Exception ex)
             {

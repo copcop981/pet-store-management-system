@@ -28,6 +28,7 @@ namespace PetStoreManagement
             cn = new SqlConnection(dbcon.connection());
             mainForm = mainF;
             getTransNo();
+            loadCashTempDataList();
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace PetStoreManagement
         {
             CashCustomer ccForm = new CashCustomer(this);
             ccForm.ShowDialog();
-            btnCash.Enabled = true;
+            //btnCash.Enabled = true;
         }
 
         private void btnCash_Click(object sender, EventArgs e)
@@ -87,6 +88,7 @@ namespace PetStoreManagement
             btnAddCustomer.Visible = false;
             gridCash.Rows.Clear();
             mainForm.loadDailySale();
+            loadCashTempDataList();
         }
 
         private void gridCash_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -97,11 +99,12 @@ namespace PetStoreManagement
                 if (MessageBox.Show("Are you sure you want to Delete This Cash?", title, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     cn.Open();
-                    cm = new SqlCommand($"delete from dbo.Cash where CashId = {gridCash.Rows[e.RowIndex].Cells[1].Value}", cn);
+                    cm = new SqlCommand($"delete from dbo.TemporaryData where CashId = {gridCash.Rows[e.RowIndex].Cells[1].Value}", cn);
                     cm.ExecuteNonQuery();
                     cn.Close();
                     MessageBox.Show("Cash has been Successfully Deleted!", title);
                 }
+                
             }
             else if(colName == "Increase")
             {
@@ -192,6 +195,14 @@ namespace PetStoreManagement
                 rd.Close();
                 cn.Close();
                 lblTotal.Text = totalPayment + "đ";
+                if (gridCash.Rows.Count == 0)
+                {
+                    btnAddCustomer.Visible = false;
+                    btnCash.Enabled = false;
+                    picBoxNoItemsFound.Visible = true;
+                }
+                else
+                    picBoxNoItemsFound.Visible = false;
             }
             catch (Exception ex)
             {

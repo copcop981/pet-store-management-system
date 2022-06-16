@@ -107,6 +107,10 @@ namespace PetStoreManagement
             }
             rd.Close();
             cn.Close();
+            if (gridUser.Rows.Count == 0)
+                picBoxNoItemsFound.Visible = true;
+            else
+                picBoxNoItemsFound.Visible = false;
         }
         #endregion
     }

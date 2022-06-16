@@ -29,9 +29,9 @@ namespace PetStoreManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.gridCash = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -48,15 +48,17 @@ namespace PetStoreManagement
             this.Decrease = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.btnCash = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblTransNo = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
+            this.picBoxNoItemsFound = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridCash)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxNoItemsFound)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,23 +75,23 @@ namespace PetStoreManagement
             this.gridCash.AllowUserToAddRows = false;
             this.gridCash.AllowUserToDeleteRows = false;
             this.gridCash.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.Color.White;
-            this.gridCash.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.gridCash.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.gridCash.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridCash.BackgroundColor = System.Drawing.Color.White;
             this.gridCash.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridCash.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridCash.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridCash.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridCash.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.gridCash.ColumnHeadersHeight = 35;
             this.gridCash.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.gridCash.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -105,14 +107,14 @@ namespace PetStoreManagement
             this.Increase,
             this.Decrease,
             this.Delete});
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridCash.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridCash.DefaultCellStyle = dataGridViewCellStyle9;
             this.gridCash.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridCash.EnableHeadersVisualStyles = false;
             this.gridCash.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -222,27 +224,30 @@ namespace PetStoreManagement
             this.Increase.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Increase.HeaderText = "";
             this.Increase.Image = ((System.Drawing.Image)(resources.GetObject("Increase.Image")));
+            this.Increase.MinimumWidth = 30;
             this.Increase.Name = "Increase";
             this.Increase.ReadOnly = true;
-            this.Increase.Width = 5;
+            this.Increase.Width = 30;
             // 
             // Decrease
             // 
             this.Decrease.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Decrease.HeaderText = "";
             this.Decrease.Image = ((System.Drawing.Image)(resources.GetObject("Decrease.Image")));
+            this.Decrease.MinimumWidth = 30;
             this.Decrease.Name = "Decrease";
             this.Decrease.ReadOnly = true;
-            this.Decrease.Width = 5;
+            this.Decrease.Width = 30;
             // 
             // Delete
             // 
             this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Delete.HeaderText = "";
             this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
+            this.Delete.MinimumWidth = 30;
             this.Delete.Name = "Delete";
             this.Delete.ReadOnly = true;
-            this.Delete.Width = 5;
+            this.Delete.Width = 30;
             // 
             // panel2
             // 
@@ -258,6 +263,27 @@ namespace PetStoreManagement
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(754, 39);
             this.panel2.TabIndex = 7;
+            // 
+            // btnCash
+            // 
+            this.btnCash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCash.AutoRoundedCorners = true;
+            this.btnCash.BorderRadius = 16;
+            this.btnCash.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCash.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCash.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCash.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCash.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCash.Enabled = false;
+            this.btnCash.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.btnCash.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCash.ForeColor = System.Drawing.Color.White;
+            this.btnCash.Location = new System.Drawing.Point(648, 2);
+            this.btnCash.Name = "btnCash";
+            this.btnCash.Size = new System.Drawing.Size(103, 34);
+            this.btnCash.TabIndex = 25;
+            this.btnCash.Text = "Cash";
+            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
             // 
             // btnAddCustomer
             // 
@@ -281,27 +307,6 @@ namespace PetStoreManagement
             this.btnAddCustomer.Text = "Customer";
             this.btnAddCustomer.Visible = false;
             this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
-            // 
-            // btnCash
-            // 
-            this.btnCash.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCash.AutoRoundedCorners = true;
-            this.btnCash.BorderRadius = 16;
-            this.btnCash.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCash.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCash.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCash.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCash.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCash.Enabled = false;
-            this.btnCash.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.btnCash.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCash.ForeColor = System.Drawing.Color.White;
-            this.btnCash.Location = new System.Drawing.Point(648, 2);
-            this.btnCash.Name = "btnCash";
-            this.btnCash.Size = new System.Drawing.Size(103, 34);
-            this.btnCash.TabIndex = 25;
-            this.btnCash.Text = "Cash";
-            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
             // 
             // lblTotal
             // 
@@ -370,10 +375,24 @@ namespace PetStoreManagement
             this.btnAddProduct.Text = "Product";
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
+            // picBoxNoItemsFound
+            // 
+            this.picBoxNoItemsFound.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picBoxNoItemsFound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoItemsFound.Image")));
+            this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 49);
+            this.picBoxNoItemsFound.Name = "picBoxNoItemsFound";
+            this.picBoxNoItemsFound.Size = new System.Drawing.Size(754, 218);
+            this.picBoxNoItemsFound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxNoItemsFound.TabIndex = 9;
+            this.picBoxNoItemsFound.TabStop = false;
+            this.picBoxNoItemsFound.Visible = false;
+            // 
             // CashForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(754, 267);
+            this.Controls.Add(this.picBoxNoItemsFound);
             this.Controls.Add(this.gridCash);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -384,6 +403,7 @@ namespace PetStoreManagement
             ((System.ComponentModel.ISupportInitialize)(this.gridCash)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxNoItemsFound)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,7 +417,6 @@ namespace PetStoreManagement
         private System.Windows.Forms.Label lblTotal;
         public System.Windows.Forms.Label lblTransNo;
         public Guna.UI2.WinForms.Guna2DataGridView gridCash;
-        private Guna.UI2.WinForms.Guna2Button btnCash;
         public Guna.UI2.WinForms.Guna2Button btnAddCustomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -411,5 +430,7 @@ namespace PetStoreManagement
         private System.Windows.Forms.DataGridViewImageColumn Increase;
         private System.Windows.Forms.DataGridViewImageColumn Decrease;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private System.Windows.Forms.PictureBox picBoxNoItemsFound;
+        public Guna.UI2.WinForms.Guna2Button btnCash;
     }
 }
