@@ -29,6 +29,7 @@ namespace PetStoreManagement
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -56,6 +57,7 @@ namespace PetStoreManagement
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
             this.picBoxNoItemsFound = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridCash)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNoItemsFound)).BeginInit();
@@ -67,7 +69,7 @@ namespace PetStoreManagement
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(754, 10);
+            this.panel1.Size = new System.Drawing.Size(814, 10);
             this.panel1.TabIndex = 6;
             // 
             // gridCash
@@ -124,7 +126,7 @@ namespace PetStoreManagement
             this.gridCash.RowHeadersVisible = false;
             this.gridCash.RowTemplate.Height = 30;
             this.gridCash.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridCash.Size = new System.Drawing.Size(754, 218);
+            this.gridCash.Size = new System.Drawing.Size(814, 218);
             this.gridCash.TabIndex = 8;
             this.gridCash.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridCash.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -261,7 +263,7 @@ namespace PetStoreManagement
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 10);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(754, 39);
+            this.panel2.Size = new System.Drawing.Size(814, 39);
             this.panel2.TabIndex = 7;
             // 
             // btnCash
@@ -278,7 +280,7 @@ namespace PetStoreManagement
             this.btnCash.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnCash.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCash.ForeColor = System.Drawing.Color.White;
-            this.btnCash.Location = new System.Drawing.Point(648, 2);
+            this.btnCash.Location = new System.Drawing.Point(708, 2);
             this.btnCash.Name = "btnCash";
             this.btnCash.Size = new System.Drawing.Size(103, 34);
             this.btnCash.TabIndex = 25;
@@ -299,7 +301,7 @@ namespace PetStoreManagement
             this.btnAddCustomer.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnAddCustomer.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnAddCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCustomer.Image")));
-            this.btnAddCustomer.Location = new System.Drawing.Point(111, 2);
+            this.btnAddCustomer.Location = new System.Drawing.Point(112, 2);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.PressedColor = System.Drawing.Color.Transparent;
             this.btnAddCustomer.Size = new System.Drawing.Size(99, 34);
@@ -312,17 +314,17 @@ namespace PetStoreManagement
             // 
             this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(557, 9);
+            this.lblTotal.Location = new System.Drawing.Point(568, 9);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(90, 20);
+            this.lblTotal.Size = new System.Drawing.Size(134, 20);
             this.lblTotal.TabIndex = 24;
-            this.lblTotal.Text = "0đ";
+            this.lblTotal.Text = "0.00đ";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTransNo
             // 
             this.lblTransNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTransNo.Location = new System.Drawing.Point(347, 9);
+            this.lblTransNo.Location = new System.Drawing.Point(357, 9);
             this.lblTransNo.Name = "lblTransNo";
             this.lblTransNo.Size = new System.Drawing.Size(122, 20);
             this.lblTransNo.TabIndex = 23;
@@ -335,7 +337,7 @@ namespace PetStoreManagement
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.label3.Location = new System.Drawing.Point(470, 9);
+            this.label3.Location = new System.Drawing.Point(481, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 22;
@@ -347,7 +349,7 @@ namespace PetStoreManagement
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.label2.Location = new System.Drawing.Point(229, 9);
+            this.label2.Location = new System.Drawing.Point(239, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 21;
@@ -382,7 +384,7 @@ namespace PetStoreManagement
             this.picBoxNoItemsFound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoItemsFound.Image")));
             this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 49);
             this.picBoxNoItemsFound.Name = "picBoxNoItemsFound";
-            this.picBoxNoItemsFound.Size = new System.Drawing.Size(754, 218);
+            this.picBoxNoItemsFound.Size = new System.Drawing.Size(814, 218);
             this.picBoxNoItemsFound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxNoItemsFound.TabIndex = 9;
             this.picBoxNoItemsFound.TabStop = false;
@@ -391,7 +393,7 @@ namespace PetStoreManagement
             // CashForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(754, 267);
+            this.ClientSize = new System.Drawing.Size(814, 267);
             this.Controls.Add(this.picBoxNoItemsFound);
             this.Controls.Add(this.gridCash);
             this.Controls.Add(this.panel2);
@@ -431,6 +433,7 @@ namespace PetStoreManagement
         private System.Windows.Forms.DataGridViewImageColumn Decrease;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
         private System.Windows.Forms.PictureBox picBoxNoItemsFound;
-        public Guna.UI2.WinForms.Guna2Button btnCash;
+        internal Guna.UI2.WinForms.Guna2Button btnCash;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

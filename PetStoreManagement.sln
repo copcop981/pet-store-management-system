@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetStoreManagement", "PetStoreManagement\PetStoreManagement.csproj", "{0F219E03-4C0A-408C-918A-0ACCEB7E579A}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "QuanLyBanHang", "QuanLyBanHang\QuanLyBanHang.vdproj", "{69D11ADF-70BD-4D7A-8D8F-173A14D84417}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +15,6 @@ Global
 		{0F219E03-4C0A-408C-918A-0ACCEB7E579A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F219E03-4C0A-408C-918A-0ACCEB7E579A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F219E03-4C0A-408C-918A-0ACCEB7E579A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69D11ADF-70BD-4D7A-8D8F-173A14D84417}.Debug|Any CPU.ActiveCfg = Debug
-		{69D11ADF-70BD-4D7A-8D8F-173A14D84417}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

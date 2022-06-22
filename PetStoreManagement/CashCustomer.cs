@@ -73,6 +73,7 @@ namespace PetStoreManagement
                 cn.Close();
                 cashForm.loadCashTempDataList();
                 cashForm.btnCash.Enabled = true;
+                //cashForm.btnInvoice.Enabled = true;
                 Dispose();
             }
         }

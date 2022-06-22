@@ -90,7 +90,7 @@ namespace PetStoreManagement
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(922, 0);
+            this.panel1.Location = new System.Drawing.Point(982, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(6, 616);
             this.panel1.TabIndex = 0;
@@ -105,7 +105,7 @@ namespace PetStoreManagement
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(922, 55);
+            this.panel2.Size = new System.Drawing.Size(982, 55);
             this.panel2.TabIndex = 1;
             // 
             // panel11
@@ -114,7 +114,7 @@ namespace PetStoreManagement
             this.panel11.Controls.Add(this.btnClose);
             this.panel11.Controls.Add(this.btnMinimize);
             this.panel11.Controls.Add(this.btnMaximize);
-            this.panel11.Location = new System.Drawing.Point(821, 12);
+            this.panel11.Location = new System.Drawing.Point(881, 12);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(91, 30);
             this.panel11.TabIndex = 20;
@@ -217,7 +217,7 @@ namespace PetStoreManagement
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(922, 55);
+            this.lblTitle.Size = new System.Drawing.Size(982, 55);
             this.lblTitle.TabIndex = 19;
             this.lblTitle.Text = "Pet Store Management System";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -456,7 +456,7 @@ namespace PetStoreManagement
             this.pnChildForm.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnChildForm.Location = new System.Drawing.Point(168, 55);
             this.pnChildForm.Name = "pnChildForm";
-            this.pnChildForm.Size = new System.Drawing.Size(754, 267);
+            this.pnChildForm.Size = new System.Drawing.Size(814, 267);
             this.pnChildForm.TabIndex = 3;
             // 
             // panel6
@@ -465,7 +465,7 @@ namespace PetStoreManagement
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(168, 322);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(754, 6);
+            this.panel6.Size = new System.Drawing.Size(814, 6);
             this.panel6.TabIndex = 4;
             // 
             // pnDash
@@ -478,7 +478,7 @@ namespace PetStoreManagement
             this.pnDash.Location = new System.Drawing.Point(168, 328);
             this.pnDash.Name = "pnDash";
             this.pnDash.Padding = new System.Windows.Forms.Padding(10);
-            this.pnDash.Size = new System.Drawing.Size(754, 288);
+            this.pnDash.Size = new System.Drawing.Size(814, 288);
             this.pnDash.TabIndex = 5;
             // 
             // panel10
@@ -490,7 +490,7 @@ namespace PetStoreManagement
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(10, 10);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(460, 268);
+            this.panel10.Size = new System.Drawing.Size(520, 268);
             this.panel10.TabIndex = 2;
             // 
             // label9
@@ -532,7 +532,7 @@ namespace PetStoreManagement
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(460, 268);
+            this.pictureBox3.Size = new System.Drawing.Size(520, 268);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -541,7 +541,7 @@ namespace PetStoreManagement
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(470, 10);
+            this.panel8.Location = new System.Drawing.Point(530, 10);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(6, 268);
             this.panel8.TabIndex = 1;
@@ -552,7 +552,7 @@ namespace PetStoreManagement
             this.panel7.Controls.Add(this.panel9);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(476, 10);
+            this.panel7.Location = new System.Drawing.Point(536, 10);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(268, 268);
             this.panel7.TabIndex = 0;
@@ -674,7 +674,7 @@ namespace PetStoreManagement
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(928, 616);
+            this.ClientSize = new System.Drawing.Size(988, 616);
             this.Controls.Add(this.pnDash);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.pnChildForm);

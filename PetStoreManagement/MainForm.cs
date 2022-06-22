@@ -132,14 +132,14 @@ namespace PetStoreManagement
             if(WindowState == FormWindowState.Normal)
             {
                 WindowState = FormWindowState.Maximized;
-                btnMaximize.Image = Image.FromFile(Application.StartupPath + "\\Resources\\imgs\\IconRestoreBrowser_new.png");
-                btnMaximize.HoverState.Image = Image.FromFile(Application.StartupPath + "\\Resources\\imgs\\IconRestoreBrowserFill_new.png");
+                btnMaximize.Image = Image.FromFile($@"{Application.StartupPath}\Resources\imgs\IconRestoreBrowser_new.png");
+                btnMaximize.HoverState.Image = Image.FromFile($@"{Application.StartupPath}\Resources\imgs\IconRestoreBrowserFill_new.png");
             }
             else if(WindowState == FormWindowState.Maximized)
             {
                 WindowState = FormWindowState.Normal;
-                btnMaximize.Image = Image.FromFile(Application.StartupPath + "\\Resources\\imgs\\IconMaximize_new.png");
-                btnMaximize.HoverState.Image = Image.FromFile(Application.StartupPath + "\\Resources\\imgs\\IconMaximizeFill_new.png");
+                btnMaximize.Image = new Bitmap($@"{Application.StartupPath}\Resources\imgs\IconMaximize_new.png");
+                btnMaximize.HoverState.Image = new Bitmap($@"{Application.StartupPath}\Resources\imgs\IconMaximizeFill_new.png");
             }
         }
 

@@ -32,6 +32,7 @@ namespace PetStoreManagement
             cn = new SqlConnection(dbcon.connection());
             loadProductList();
             cashForm = cash;
+            AcceptButton = btnSubmit;
 
             Panel[] panelList = { panel1, panel2 };
             for(int i = 0; i < panelList.Length; i++)

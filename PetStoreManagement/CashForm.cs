@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using PetStoreManagement.DTO;
 
 namespace PetStoreManagement
 {
@@ -44,9 +45,11 @@ namespace PetStoreManagement
             ccForm.ShowDialog();
             //btnCash.Enabled = true;
         }
-
+        
         private void btnCash_Click(object sender, EventArgs e)
         {
+            List<InvoiceDTO> ds = new List<InvoiceDTO>();
+
             DialogResult dlR = MessageBox.Show("Are you sure you want to Cash This Product?", title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (dlR == DialogResult.Yes)
@@ -81,14 +84,54 @@ namespace PetStoreManagement
                     cm.Parameters.Add("@Cashier", SqlDbType.VarChar).Value = mainForm.lblUsername.Text;
                     cm.ExecuteNonQuery();
                     cn.Close();
+
+                    InvoiceDTO iv = new InvoiceDTO();
+                    iv.CashId = (int)gridCash.Rows[i].Cells[1].Value;
+                    iv.Pid = gridCash.Rows[i].Cells[2].Value.ToString();
+                    iv.Pname = gridCash.Rows[i].Cells[3].Value.ToString();
+                    iv.Pquantity = (int)gridCash.Rows[i].Cells[4].Value;
+                    iv.Pprice = (int)gridCash.Rows[i].Cells[5].Value;
+                    iv.Total = (int)gridCash.Rows[i].Cells[4].Value * (int)gridCash.Rows[i].Cells[5].Value;
+                    iv.Cname = gridCash.Rows[i].Cells[7].Value.ToString();
+                    iv.Cashier = gridCash.Rows[i].Cells[8].Value.ToString();
+
+                    ds.Add(iv);
+                }
+
+                DialogResult dlR2 = MessageBox.Show("Would you like to issue an invoice?", title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dlR2 == DialogResult.Yes)
+                {
+                    InvoiceForm f = new InvoiceForm(ds, lblTotal.Text);
+                    f.ShowDialog();
                 }
             }
-            lblTotal.Text = 0 + "đ";
-            btnCash.Enabled = false;
-            btnAddCustomer.Visible = false;
+            
+            if (gridCash.Rows.Count == 0)
+            {
+                btnAddCustomer.Visible = false;
+                btnCash.Enabled = false;
+            }
+            else
+            {
+                btnAddCustomer.Visible = true;
+                btnCash.Enabled = true;
+            }
+
+            lblTotal.Text = 0 + ".00đ";
             gridCash.Rows.Clear();
+            //btnInvoice.Enabled = false;
             mainForm.loadDailySale();
             loadCashTempDataList();
+        }
+
+        private void btnInvoice_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnInvoice_MouseHover(object sender, EventArgs e)
+        {
+            //toolTip1.SetToolTip(btnInvoice, "Print Invoice");
         }
 
         private void gridCash_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -194,11 +237,13 @@ namespace PetStoreManagement
                 }
                 rd.Close();
                 cn.Close();
-                lblTotal.Text = totalPayment + "đ";
+                lblTotal.Text = totalPayment + "";
+                lblTotal.Text = string.Format("{0:#,##0.00}đ", double.Parse(lblTotal.Text));
                 if (gridCash.Rows.Count == 0)
                 {
                     btnAddCustomer.Visible = false;
                     btnCash.Enabled = false;
+                    //btnInvoice.Enabled = false;
                     picBoxNoItemsFound.Visible = true;
                 }
                 else
