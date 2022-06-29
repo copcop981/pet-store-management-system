@@ -8,23 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using PetStoreManagement.BLL;
 
 namespace PetStoreManagement
 {
     public partial class Dashboard : Form
     {
-        SqlConnection cn = new SqlConnection();
-        SqlCommand cm = new SqlCommand();
-        SqlDataReader rd;
-        DbConnect dbcon = new DbConnect();
+        //SqlConnection cn = new SqlConnection();
+        //SqlCommand cm = new SqlCommand();
+        //SqlDataReader rd;
+        //DbConnect dbcon = new DbConnect();
+
+        DashboardBLL dashboardBLL = new DashboardBLL();
         public string uName;
         string title = "Pet Store Management System";
 
         public Dashboard()
         {
             InitializeComponent();
-
-            cn = new SqlConnection(dbcon.connection());
+            //cn = new SqlConnection(dbcon.connection());
         }
 
         public int countPet(string petCategory)
@@ -32,10 +34,11 @@ namespace PetStoreManagement
             int data = 0;
             try
             {
-                cn.Open();
-                cm = new SqlCommand("select isnull(sum(Pquantity), 0) from dbo.Product where Pcategory = N'" + petCategory + "'", cn);
-                data = (int)cm.ExecuteScalar();
-                cn.Close();
+                //cn.Open();
+                //cm = new SqlCommand("select isnull(sum(Pquantity), 0) from dbo.Product where Pcategory = N'" + petCategory + "'", cn);
+                //data = (int)cm.ExecuteScalar();
+                //cn.Close();
+                data = dashboardBLL.countPet(petCategory);
             }
             catch (Exception ex)
             {

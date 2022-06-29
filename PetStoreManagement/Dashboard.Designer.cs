@@ -140,11 +140,11 @@ namespace PetStoreManagement
             // lblCatCount
             // 
             this.lblCatCount.BackColor = System.Drawing.Color.Transparent;
-            this.lblCatCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCatCount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCatCount.ForeColor = System.Drawing.Color.White;
-            this.lblCatCount.Location = new System.Drawing.Point(109, 66);
+            this.lblCatCount.Location = new System.Drawing.Point(96, 66);
             this.lblCatCount.Name = "lblCatCount";
-            this.lblCatCount.Size = new System.Drawing.Size(61, 20);
+            this.lblCatCount.Size = new System.Drawing.Size(78, 20);
             this.lblCatCount.TabIndex = 1;
             this.lblCatCount.Text = "0";
             this.lblCatCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -236,11 +236,11 @@ namespace PetStoreManagement
             // lblFishCount
             // 
             this.lblFishCount.BackColor = System.Drawing.Color.Transparent;
-            this.lblFishCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFishCount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFishCount.ForeColor = System.Drawing.Color.White;
-            this.lblFishCount.Location = new System.Drawing.Point(111, 66);
+            this.lblFishCount.Location = new System.Drawing.Point(114, 66);
             this.lblFishCount.Name = "lblFishCount";
-            this.lblFishCount.Size = new System.Drawing.Size(61, 20);
+            this.lblFishCount.Size = new System.Drawing.Size(63, 20);
             this.lblFishCount.TabIndex = 1;
             this.lblFishCount.Text = "0";
             this.lblFishCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -251,7 +251,7 @@ namespace PetStoreManagement
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(133, 20);
+            this.label9.Location = new System.Drawing.Point(136, 20);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 23);
             this.label9.TabIndex = 0;
@@ -296,11 +296,11 @@ namespace PetStoreManagement
             // lblBirdCount
             // 
             this.lblBirdCount.BackColor = System.Drawing.Color.Transparent;
-            this.lblBirdCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBirdCount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBirdCount.ForeColor = System.Drawing.Color.White;
             this.lblBirdCount.Location = new System.Drawing.Point(111, 66);
             this.lblBirdCount.Name = "lblBirdCount";
-            this.lblBirdCount.Size = new System.Drawing.Size(61, 20);
+            this.lblBirdCount.Size = new System.Drawing.Size(64, 20);
             this.lblBirdCount.TabIndex = 1;
             this.lblBirdCount.Text = "0";
             this.lblBirdCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -356,11 +356,11 @@ namespace PetStoreManagement
             // lblDogCount
             // 
             this.lblDogCount.BackColor = System.Drawing.Color.Transparent;
-            this.lblDogCount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDogCount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDogCount.ForeColor = System.Drawing.Color.White;
-            this.lblDogCount.Location = new System.Drawing.Point(111, 66);
+            this.lblDogCount.Location = new System.Drawing.Point(103, 66);
             this.lblDogCount.Name = "lblDogCount";
-            this.lblDogCount.Size = new System.Drawing.Size(61, 20);
+            this.lblDogCount.Size = new System.Drawing.Size(72, 20);
             this.lblDogCount.TabIndex = 1;
             this.lblDogCount.Text = "0";
             this.lblDogCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

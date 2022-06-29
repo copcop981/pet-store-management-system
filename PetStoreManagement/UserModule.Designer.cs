@@ -52,7 +52,25 @@ namespace PetStoreManagement
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.pnTxbName = new System.Windows.Forms.Panel();
+            this.pnTxbAddress = new System.Windows.Forms.Panel();
+            this.pnTxbPhone = new System.Windows.Forms.Panel();
+            this.pnTxbPassword = new System.Windows.Forms.Panel();
+            this.pnCbbRole = new System.Windows.Forms.Panel();
+            this.pnDtpkBirth = new System.Windows.Forms.Panel();
+            this.pbName = new System.Windows.Forms.PictureBox();
+            this.pbAddress = new System.Windows.Forms.PictureBox();
+            this.pbPhone = new System.Windows.Forms.PictureBox();
+            this.pbRole = new System.Windows.Forms.PictureBox();
+            this.pbDateOfBirth = new System.Windows.Forms.PictureBox();
+            this.pbPassword = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPhone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRole)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDateOfBirth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,7 +101,7 @@ namespace PetStoreManagement
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 82);
+            this.label2.Location = new System.Drawing.Point(44, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 20);
             this.label2.TabIndex = 3;
@@ -91,23 +109,26 @@ namespace PetStoreManagement
             // 
             // txbName
             // 
-            this.txbName.Location = new System.Drawing.Point(214, 79);
+            this.txbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbName.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txbName.Location = new System.Drawing.Point(224, 82);
             this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(444, 26);
+            this.txbName.Size = new System.Drawing.Size(444, 19);
             this.txbName.TabIndex = 4;
             this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
             // 
             // txbAddress
             // 
-            this.txbAddress.Location = new System.Drawing.Point(214, 126);
+            this.txbAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbAddress.Location = new System.Drawing.Point(224, 126);
             this.txbAddress.Name = "txbAddress";
-            this.txbAddress.Size = new System.Drawing.Size(444, 26);
+            this.txbAddress.Size = new System.Drawing.Size(444, 19);
             this.txbAddress.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 129);
+            this.label3.Location = new System.Drawing.Point(44, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 5;
@@ -115,15 +136,16 @@ namespace PetStoreManagement
             // 
             // txbPhone
             // 
-            this.txbPhone.Location = new System.Drawing.Point(214, 173);
+            this.txbPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbPhone.Location = new System.Drawing.Point(224, 173);
             this.txbPhone.Name = "txbPhone";
-            this.txbPhone.Size = new System.Drawing.Size(444, 26);
+            this.txbPhone.Size = new System.Drawing.Size(444, 19);
             this.txbPhone.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 176);
+            this.label4.Location = new System.Drawing.Point(44, 176);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 20);
             this.label4.TabIndex = 7;
@@ -132,7 +154,7 @@ namespace PetStoreManagement
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 223);
+            this.label5.Location = new System.Drawing.Point(44, 223);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 20);
             this.label5.TabIndex = 9;
@@ -141,7 +163,7 @@ namespace PetStoreManagement
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(49, 270);
+            this.label6.Location = new System.Drawing.Point(44, 270);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(103, 20);
             this.label6.TabIndex = 11;
@@ -149,17 +171,18 @@ namespace PetStoreManagement
             // 
             // txbPassword
             // 
-            this.txbPassword.Location = new System.Drawing.Point(214, 314);
+            this.txbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbPassword.Location = new System.Drawing.Point(224, 314);
             this.txbPassword.Name = "txbPassword";
             this.txbPassword.PasswordChar = '♦';
-            this.txbPassword.Size = new System.Drawing.Size(444, 26);
+            this.txbPassword.Size = new System.Drawing.Size(444, 19);
             this.txbPassword.TabIndex = 14;
             this.txbPassword.TextChanged += new System.EventHandler(this.txbPassword_TextChanged);
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(49, 317);
+            this.lblPassword.Location = new System.Drawing.Point(44, 317);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(83, 20);
             this.lblPassword.TabIndex = 13;
@@ -187,7 +210,7 @@ namespace PetStoreManagement
             "Administrator",
             "Cashier",
             "Employee"});
-            this.cbbRole.Location = new System.Drawing.Point(214, 220);
+            this.cbbRole.Location = new System.Drawing.Point(224, 215);
             this.cbbRole.Name = "cbbRole";
             this.cbbRole.Size = new System.Drawing.Size(444, 28);
             this.cbbRole.TabIndex = 16;
@@ -195,7 +218,8 @@ namespace PetStoreManagement
             // 
             // dtpkBirth
             // 
-            this.dtpkBirth.Location = new System.Drawing.Point(214, 268);
+            this.dtpkBirth.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dtpkBirth.Location = new System.Drawing.Point(224, 268);
             this.dtpkBirth.Name = "dtpkBirth";
             this.dtpkBirth.Size = new System.Drawing.Size(444, 26);
             this.dtpkBirth.TabIndex = 17;
@@ -208,7 +232,7 @@ namespace PetStoreManagement
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(214, 362);
+            this.btnSave.Location = new System.Drawing.Point(224, 362);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(133, 38);
             this.btnSave.TabIndex = 18;
@@ -224,7 +248,7 @@ namespace PetStoreManagement
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(370, 362);
+            this.btnUpdate.Location = new System.Drawing.Point(380, 362);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(133, 38);
             this.btnUpdate.TabIndex = 19;
@@ -240,7 +264,7 @@ namespace PetStoreManagement
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(525, 362);
+            this.btnCancel.Location = new System.Drawing.Point(535, 362);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(133, 38);
             this.btnCancel.TabIndex = 20;
@@ -277,10 +301,131 @@ namespace PetStoreManagement
             this.btnClose.TabIndex = 16;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // pnTxbName
+            // 
+            this.pnTxbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnTxbName.Location = new System.Drawing.Point(196, 103);
+            this.pnTxbName.Name = "pnTxbName";
+            this.pnTxbName.Size = new System.Drawing.Size(472, 2);
+            this.pnTxbName.TabIndex = 22;
+            // 
+            // pnTxbAddress
+            // 
+            this.pnTxbAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnTxbAddress.Location = new System.Drawing.Point(196, 147);
+            this.pnTxbAddress.Name = "pnTxbAddress";
+            this.pnTxbAddress.Size = new System.Drawing.Size(472, 2);
+            this.pnTxbAddress.TabIndex = 23;
+            // 
+            // pnTxbPhone
+            // 
+            this.pnTxbPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnTxbPhone.Location = new System.Drawing.Point(196, 194);
+            this.pnTxbPhone.Name = "pnTxbPhone";
+            this.pnTxbPhone.Size = new System.Drawing.Size(472, 2);
+            this.pnTxbPhone.TabIndex = 24;
+            // 
+            // pnTxbPassword
+            // 
+            this.pnTxbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnTxbPassword.Location = new System.Drawing.Point(196, 335);
+            this.pnTxbPassword.Name = "pnTxbPassword";
+            this.pnTxbPassword.Size = new System.Drawing.Size(472, 2);
+            this.pnTxbPassword.TabIndex = 25;
+            // 
+            // pnCbbRole
+            // 
+            this.pnCbbRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnCbbRole.Location = new System.Drawing.Point(196, 245);
+            this.pnCbbRole.Name = "pnCbbRole";
+            this.pnCbbRole.Size = new System.Drawing.Size(472, 2);
+            this.pnCbbRole.TabIndex = 25;
+            // 
+            // pnDtpkBirth
+            // 
+            this.pnDtpkBirth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnDtpkBirth.Location = new System.Drawing.Point(196, 294);
+            this.pnDtpkBirth.Name = "pnDtpkBirth";
+            this.pnDtpkBirth.Size = new System.Drawing.Size(472, 2);
+            this.pnDtpkBirth.TabIndex = 26;
+            // 
+            // pbName
+            // 
+            this.pbName.Image = ((System.Drawing.Image)(resources.GetObject("pbName.Image")));
+            this.pbName.Location = new System.Drawing.Point(196, 79);
+            this.pbName.Name = "pbName";
+            this.pbName.Size = new System.Drawing.Size(22, 22);
+            this.pbName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbName.TabIndex = 27;
+            this.pbName.TabStop = false;
+            // 
+            // pbAddress
+            // 
+            this.pbAddress.Image = ((System.Drawing.Image)(resources.GetObject("pbAddress.Image")));
+            this.pbAddress.Location = new System.Drawing.Point(196, 123);
+            this.pbAddress.Name = "pbAddress";
+            this.pbAddress.Size = new System.Drawing.Size(22, 22);
+            this.pbAddress.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAddress.TabIndex = 28;
+            this.pbAddress.TabStop = false;
+            // 
+            // pbPhone
+            // 
+            this.pbPhone.Image = ((System.Drawing.Image)(resources.GetObject("pbPhone.Image")));
+            this.pbPhone.Location = new System.Drawing.Point(196, 170);
+            this.pbPhone.Name = "pbPhone";
+            this.pbPhone.Size = new System.Drawing.Size(22, 22);
+            this.pbPhone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPhone.TabIndex = 29;
+            this.pbPhone.TabStop = false;
+            // 
+            // pbRole
+            // 
+            this.pbRole.Image = ((System.Drawing.Image)(resources.GetObject("pbRole.Image")));
+            this.pbRole.Location = new System.Drawing.Point(196, 221);
+            this.pbRole.Name = "pbRole";
+            this.pbRole.Size = new System.Drawing.Size(22, 22);
+            this.pbRole.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbRole.TabIndex = 30;
+            this.pbRole.TabStop = false;
+            // 
+            // pbDateOfBirth
+            // 
+            this.pbDateOfBirth.Image = ((System.Drawing.Image)(resources.GetObject("pbDateOfBirth.Image")));
+            this.pbDateOfBirth.Location = new System.Drawing.Point(196, 270);
+            this.pbDateOfBirth.Name = "pbDateOfBirth";
+            this.pbDateOfBirth.Size = new System.Drawing.Size(22, 22);
+            this.pbDateOfBirth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDateOfBirth.TabIndex = 31;
+            this.pbDateOfBirth.TabStop = false;
+            // 
+            // pbPassword
+            // 
+            this.pbPassword.Image = ((System.Drawing.Image)(resources.GetObject("pbPassword.Image")));
+            this.pbPassword.Location = new System.Drawing.Point(196, 311);
+            this.pbPassword.Name = "pbPassword";
+            this.pbPassword.Size = new System.Drawing.Size(22, 22);
+            this.pbPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPassword.TabIndex = 32;
+            this.pbPassword.TabStop = false;
+            // 
             // UserModule
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(727, 426);
+            this.Controls.Add(this.pbPassword);
+            this.Controls.Add(this.pbDateOfBirth);
+            this.Controls.Add(this.pbRole);
+            this.Controls.Add(this.pbPhone);
+            this.Controls.Add(this.pbAddress);
+            this.Controls.Add(this.pbName);
+            this.Controls.Add(this.pnDtpkBirth);
+            this.Controls.Add(this.pnCbbRole);
+            this.Controls.Add(this.pnTxbPassword);
+            this.Controls.Add(this.pnTxbPhone);
+            this.Controls.Add(this.pnTxbAddress);
+            this.Controls.Add(this.pnTxbName);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
@@ -306,6 +451,12 @@ namespace PetStoreManagement
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserModule";
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPhone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbRole)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDateOfBirth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,5 +485,17 @@ namespace PetStoreManagement
         public System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btnClose;
+        private System.Windows.Forms.Panel pnTxbName;
+        private System.Windows.Forms.Panel pnTxbPhone;
+        private System.Windows.Forms.Panel pnTxbAddress;
+        private System.Windows.Forms.Panel pnTxbPassword;
+        private System.Windows.Forms.Panel pnCbbRole;
+        private System.Windows.Forms.Panel pnDtpkBirth;
+        private System.Windows.Forms.PictureBox pbPassword;
+        private System.Windows.Forms.PictureBox pbDateOfBirth;
+        private System.Windows.Forms.PictureBox pbRole;
+        private System.Windows.Forms.PictureBox pbPhone;
+        private System.Windows.Forms.PictureBox pbAddress;
+        private System.Windows.Forms.PictureBox pbName;
     }
 }

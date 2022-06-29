@@ -50,7 +50,22 @@ namespace PetStoreManagement
             this.txbPrice = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.pnTxbName = new System.Windows.Forms.Panel();
+            this.pnTxbType = new System.Windows.Forms.Panel();
+            this.pnTxbQuantity = new System.Windows.Forms.Panel();
+            this.pnTxbPrice = new System.Windows.Forms.Panel();
+            this.pnCbbCategory = new System.Windows.Forms.Panel();
+            this.pbName = new System.Windows.Forms.PictureBox();
+            this.pbType = new System.Windows.Forms.PictureBox();
+            this.pbCategory = new System.Windows.Forms.PictureBox();
+            this.pbQuantity = new System.Windows.Forms.PictureBox();
+            this.pbPrice = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCategory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -119,7 +134,7 @@ namespace PetStoreManagement
             "Bird",
             "Fish",
             "Food"});
-            this.cbbCategory.Location = new System.Drawing.Point(214, 173);
+            this.cbbCategory.Location = new System.Drawing.Point(214, 168);
             this.cbbCategory.Name = "cbbCategory";
             this.cbbCategory.Size = new System.Drawing.Size(444, 28);
             this.cbbCategory.TabIndex = 35;
@@ -156,17 +171,19 @@ namespace PetStoreManagement
             // 
             // txbQuantity
             // 
+            this.txbQuantity.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbQuantity.Location = new System.Drawing.Point(214, 220);
             this.txbQuantity.Name = "txbQuantity";
-            this.txbQuantity.Size = new System.Drawing.Size(444, 26);
+            this.txbQuantity.Size = new System.Drawing.Size(444, 19);
             this.txbQuantity.TabIndex = 29;
             this.txbQuantity.TextChanged += new System.EventHandler(this.txbQuantity_TextChanged);
             // 
             // txbType
             // 
+            this.txbType.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbType.Location = new System.Drawing.Point(214, 126);
             this.txbType.Name = "txbType";
-            this.txbType.Size = new System.Drawing.Size(444, 26);
+            this.txbType.Size = new System.Drawing.Size(444, 19);
             this.txbType.TabIndex = 27;
             this.txbType.TextChanged += new System.EventHandler(this.txbType_TextChanged);
             // 
@@ -210,9 +227,10 @@ namespace PetStoreManagement
             // 
             // txbName
             // 
+            this.txbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbName.Location = new System.Drawing.Point(214, 79);
             this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(444, 26);
+            this.txbName.Size = new System.Drawing.Size(444, 19);
             this.txbName.TabIndex = 25;
             this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
             // 
@@ -227,9 +245,10 @@ namespace PetStoreManagement
             // 
             // txbPrice
             // 
+            this.txbPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbPrice.Location = new System.Drawing.Point(214, 267);
             this.txbPrice.Name = "txbPrice";
-            this.txbPrice.Size = new System.Drawing.Size(444, 26);
+            this.txbPrice.Size = new System.Drawing.Size(444, 19);
             this.txbPrice.TabIndex = 41;
             this.txbPrice.TextChanged += new System.EventHandler(this.txbPrice_TextChanged);
             // 
@@ -262,10 +281,111 @@ namespace PetStoreManagement
             this.btnClose.TabIndex = 16;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // pnTxbName
+            // 
+            this.pnTxbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnTxbName.Location = new System.Drawing.Point(186, 100);
+            this.pnTxbName.Name = "pnTxbName";
+            this.pnTxbName.Size = new System.Drawing.Size(472, 2);
+            this.pnTxbName.TabIndex = 43;
+            // 
+            // pnTxbType
+            // 
+            this.pnTxbType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnTxbType.Location = new System.Drawing.Point(186, 147);
+            this.pnTxbType.Name = "pnTxbType";
+            this.pnTxbType.Size = new System.Drawing.Size(472, 2);
+            this.pnTxbType.TabIndex = 44;
+            // 
+            // pnTxbQuantity
+            // 
+            this.pnTxbQuantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnTxbQuantity.Location = new System.Drawing.Point(186, 241);
+            this.pnTxbQuantity.Name = "pnTxbQuantity";
+            this.pnTxbQuantity.Size = new System.Drawing.Size(472, 2);
+            this.pnTxbQuantity.TabIndex = 45;
+            // 
+            // pnTxbPrice
+            // 
+            this.pnTxbPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnTxbPrice.Location = new System.Drawing.Point(186, 288);
+            this.pnTxbPrice.Name = "pnTxbPrice";
+            this.pnTxbPrice.Size = new System.Drawing.Size(472, 2);
+            this.pnTxbPrice.TabIndex = 45;
+            // 
+            // pnCbbCategory
+            // 
+            this.pnCbbCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnCbbCategory.Location = new System.Drawing.Point(186, 198);
+            this.pnCbbCategory.Name = "pnCbbCategory";
+            this.pnCbbCategory.Size = new System.Drawing.Size(472, 2);
+            this.pnCbbCategory.TabIndex = 45;
+            // 
+            // pbName
+            // 
+            this.pbName.Image = ((System.Drawing.Image)(resources.GetObject("pbName.Image")));
+            this.pbName.Location = new System.Drawing.Point(186, 76);
+            this.pbName.Name = "pbName";
+            this.pbName.Size = new System.Drawing.Size(22, 22);
+            this.pbName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbName.TabIndex = 46;
+            this.pbName.TabStop = false;
+            // 
+            // pbType
+            // 
+            this.pbType.Image = ((System.Drawing.Image)(resources.GetObject("pbType.Image")));
+            this.pbType.Location = new System.Drawing.Point(186, 123);
+            this.pbType.Name = "pbType";
+            this.pbType.Size = new System.Drawing.Size(22, 22);
+            this.pbType.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbType.TabIndex = 47;
+            this.pbType.TabStop = false;
+            // 
+            // pbCategory
+            // 
+            this.pbCategory.Image = ((System.Drawing.Image)(resources.GetObject("pbCategory.Image")));
+            this.pbCategory.Location = new System.Drawing.Point(186, 174);
+            this.pbCategory.Name = "pbCategory";
+            this.pbCategory.Size = new System.Drawing.Size(22, 22);
+            this.pbCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCategory.TabIndex = 48;
+            this.pbCategory.TabStop = false;
+            // 
+            // pbQuantity
+            // 
+            this.pbQuantity.Image = ((System.Drawing.Image)(resources.GetObject("pbQuantity.Image")));
+            this.pbQuantity.Location = new System.Drawing.Point(186, 217);
+            this.pbQuantity.Name = "pbQuantity";
+            this.pbQuantity.Size = new System.Drawing.Size(22, 22);
+            this.pbQuantity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbQuantity.TabIndex = 49;
+            this.pbQuantity.TabStop = false;
+            // 
+            // pbPrice
+            // 
+            this.pbPrice.Image = ((System.Drawing.Image)(resources.GetObject("pbPrice.Image")));
+            this.pbPrice.Location = new System.Drawing.Point(186, 264);
+            this.pbPrice.Name = "pbPrice";
+            this.pbPrice.Size = new System.Drawing.Size(22, 22);
+            this.pbPrice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPrice.TabIndex = 50;
+            this.pbPrice.TabStop = false;
+            // 
             // ProductModule
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(727, 381);
+            this.Controls.Add(this.pbPrice);
+            this.Controls.Add(this.pbQuantity);
+            this.Controls.Add(this.pbCategory);
+            this.Controls.Add(this.pbType);
+            this.Controls.Add(this.pbName);
+            this.Controls.Add(this.pnCbbCategory);
+            this.Controls.Add(this.pnTxbPrice);
+            this.Controls.Add(this.pnTxbQuantity);
+            this.Controls.Add(this.pnTxbType);
+            this.Controls.Add(this.pnTxbName);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txbPrice);
             this.Controls.Add(this.btnCancel);
@@ -289,6 +409,11 @@ namespace PetStoreManagement
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductModule";
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCategory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,5 +439,15 @@ namespace PetStoreManagement
         public System.Windows.Forms.TextBox txbPrice;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btnClose;
+        private System.Windows.Forms.Panel pnTxbType;
+        private System.Windows.Forms.Panel pnTxbName;
+        private System.Windows.Forms.Panel pnTxbPrice;
+        private System.Windows.Forms.Panel pnTxbQuantity;
+        private System.Windows.Forms.Panel pnCbbCategory;
+        private System.Windows.Forms.PictureBox pbName;
+        private System.Windows.Forms.PictureBox pbPrice;
+        private System.Windows.Forms.PictureBox pbQuantity;
+        private System.Windows.Forms.PictureBox pbCategory;
+        private System.Windows.Forms.PictureBox pbType;
     }
 }

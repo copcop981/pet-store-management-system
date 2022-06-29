@@ -8,22 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using PetStoreManagement.BLL;
+using PetStoreManagement.DTO;
 
 namespace PetStoreManagement
 {
     public partial class ProductForm : Form
     {
-        SqlConnection cn = new SqlConnection();
-        SqlCommand cm = new SqlCommand();
-        SqlDataReader rd;
-        DbConnect dbcon = new DbConnect();
+        //SqlConnection cn = new SqlConnection();
+        //SqlCommand cm = new SqlCommand();
+        //SqlDataReader rd;
+        //DbConnect dbcon = new DbConnect();
+
+        ProductBLL productBLL = new ProductBLL();
         string title = "Pet Store Management System";
 
         public ProductForm()
         {
             InitializeComponent();
 
-            cn = new SqlConnection(dbcon.connection());
+            //cn = new SqlConnection(dbcon.connection());
             loadProductList();
         }
 
@@ -67,11 +71,13 @@ namespace PetStoreManagement
                 {
                     if (MessageBox.Show("Are you sure you want to Delete This Product?", title, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        cn.Open();
-                        cm = new SqlCommand($"delete from dbo.Product where Pid = {gridProduct.Rows[e.RowIndex].Cells[1].Value}", cn);
-                        cm.ExecuteNonQuery();
-                        cn.Close();
-                        MessageBox.Show("Product has been Successfully Deleted!", title);
+                        //cn.Open();
+                        //cm = new SqlCommand($"delete from dbo.Product where Pid = {gridProduct.Rows[e.RowIndex].Cells[1].Value}", cn);
+                        //cm.ExecuteNonQuery();
+                        //cn.Close();
+                        int result = productBLL.deleteProduct((int)gridProduct.Rows[e.RowIndex].Cells[1].Value);
+                        if(result > 0)
+                            MessageBox.Show("Product has been Successfully Deleted!", title);
                     }
                 }
                 loadProductList();
@@ -85,26 +91,42 @@ namespace PetStoreManagement
         #region Method
         public void loadProductList()
         {
+            //cm = new SqlCommand($"select * from dbo.Product where concat(Pname, Ptype, Pcategory) like '%{txbSearch.Text}%'", cn);
+            //cn.Open();
+            //rd = cm.ExecuteReader();
+            //while (rd.Read())
+            //{
+            //    i++;
+            //    string Pid = rd[0].ToString();
+            //    string Pname = rd[1].ToString();
+            //    string Ptype = rd[2].ToString();
+            //    string Pcategory = rd[3].ToString();
+            //    int Pquantity = (int)rd[4];
+            //    int Pprice = (int)rd[5];
+
+            //    gridProduct.Rows.Add(i, Pid, Pname, Ptype, Pcategory, Pquantity, Pprice);
+            //}
+            //rd.Close();
+            //cn.Close();
+
+            List<ProductDTO> productList = productBLL.getAllProduct(txbSearch.Text);
+
             int i = 0;
             gridProduct.Rows.Clear();
 
-            cm = new SqlCommand($"select * from dbo.Product where concat(Pname, Ptype, Pcategory) like '%{txbSearch.Text}%'", cn);
-            cn.Open();
-            rd = cm.ExecuteReader();
-            while (rd.Read())
+            foreach(ProductDTO product in productList)
             {
                 i++;
-                string Pid = rd[0].ToString();
-                string Pname = rd[1].ToString();
-                string Ptype = rd[2].ToString();
-                string Pcategory = rd[3].ToString();
-                int Pquantity = (int)rd[4];
-                int Pprice = (int)rd[5];
+                int pId = product.Pid;
+                string pName = product.Pname;
+                string pType = product.Ptype;
+                string pCategory = product.Pcategory;
+                int pQuantity = product.Pquantity;
+                int pPrice = product.Pprice;
 
-                gridProduct.Rows.Add(i, Pid, Pname, Ptype, Pcategory, Pquantity, Pprice);
+                gridProduct.Rows.Add(i, pId, pName, pType, pCategory, pQuantity, pPrice);
             }
-            rd.Close();
-            cn.Close();
+
             if (gridProduct.Rows.Count == 0)
                 picBoxNoItemsFound.Visible = true;
             else

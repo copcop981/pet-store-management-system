@@ -46,7 +46,16 @@ namespace PetStoreManagement
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.pnTxbName = new System.Windows.Forms.Panel();
+            this.pnTxbAddress = new System.Windows.Forms.Panel();
+            this.pnTxbPhone = new System.Windows.Forms.Panel();
+            this.pbName = new System.Windows.Forms.PictureBox();
+            this.pbAddress = new System.Windows.Forms.PictureBox();
+            this.pbPhone = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddress)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPhone)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -110,16 +119,20 @@ namespace PetStoreManagement
             // 
             // txbPhone
             // 
+            this.txbPhone.BackColor = System.Drawing.Color.White;
+            this.txbPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbPhone.Location = new System.Drawing.Point(217, 173);
             this.txbPhone.Name = "txbPhone";
-            this.txbPhone.Size = new System.Drawing.Size(444, 26);
+            this.txbPhone.Size = new System.Drawing.Size(444, 19);
             this.txbPhone.TabIndex = 29;
             // 
             // txbAddress
             // 
+            this.txbAddress.BackColor = System.Drawing.Color.White;
+            this.txbAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbAddress.Location = new System.Drawing.Point(217, 126);
             this.txbAddress.Name = "txbAddress";
-            this.txbAddress.Size = new System.Drawing.Size(444, 26);
+            this.txbAddress.Size = new System.Drawing.Size(444, 19);
             this.txbAddress.TabIndex = 27;
             // 
             // label3
@@ -133,9 +146,11 @@ namespace PetStoreManagement
             // 
             // txbName
             // 
+            this.txbName.BackColor = System.Drawing.Color.White;
+            this.txbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txbName.Location = new System.Drawing.Point(217, 79);
             this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(444, 26);
+            this.txbName.Size = new System.Drawing.Size(444, 19);
             this.txbName.TabIndex = 25;
             this.txbName.TextChanged += new System.EventHandler(this.txbName_TextChanged);
             // 
@@ -211,10 +226,71 @@ namespace PetStoreManagement
             this.btnClose.TabIndex = 16;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // pnTxbName
+            // 
+            this.pnTxbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnTxbName.Location = new System.Drawing.Point(189, 100);
+            this.pnTxbName.Name = "pnTxbName";
+            this.pnTxbName.Size = new System.Drawing.Size(472, 2);
+            this.pnTxbName.TabIndex = 45;
+            // 
+            // pnTxbAddress
+            // 
+            this.pnTxbAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnTxbAddress.Location = new System.Drawing.Point(189, 147);
+            this.pnTxbAddress.Name = "pnTxbAddress";
+            this.pnTxbAddress.Size = new System.Drawing.Size(472, 2);
+            this.pnTxbAddress.TabIndex = 46;
+            // 
+            // pnTxbPhone
+            // 
+            this.pnTxbPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnTxbPhone.Location = new System.Drawing.Point(189, 194);
+            this.pnTxbPhone.Name = "pnTxbPhone";
+            this.pnTxbPhone.Size = new System.Drawing.Size(472, 2);
+            this.pnTxbPhone.TabIndex = 47;
+            // 
+            // pbName
+            // 
+            this.pbName.Image = ((System.Drawing.Image)(resources.GetObject("pbName.Image")));
+            this.pbName.Location = new System.Drawing.Point(189, 76);
+            this.pbName.Name = "pbName";
+            this.pbName.Size = new System.Drawing.Size(22, 22);
+            this.pbName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbName.TabIndex = 48;
+            this.pbName.TabStop = false;
+            // 
+            // pbAddress
+            // 
+            this.pbAddress.Image = ((System.Drawing.Image)(resources.GetObject("pbAddress.Image")));
+            this.pbAddress.Location = new System.Drawing.Point(189, 123);
+            this.pbAddress.Name = "pbAddress";
+            this.pbAddress.Size = new System.Drawing.Size(22, 22);
+            this.pbAddress.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAddress.TabIndex = 49;
+            this.pbAddress.TabStop = false;
+            // 
+            // pbPhone
+            // 
+            this.pbPhone.Image = ((System.Drawing.Image)(resources.GetObject("pbPhone.Image")));
+            this.pbPhone.Location = new System.Drawing.Point(189, 170);
+            this.pbPhone.Name = "pbPhone";
+            this.pbPhone.Size = new System.Drawing.Size(22, 22);
+            this.pbPhone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPhone.TabIndex = 50;
+            this.pbPhone.TabStop = false;
+            // 
             // CustomerModule
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(727, 288);
+            this.Controls.Add(this.pbPhone);
+            this.Controls.Add(this.pbAddress);
+            this.Controls.Add(this.pbName);
+            this.Controls.Add(this.pnTxbPhone);
+            this.Controls.Add(this.pnTxbAddress);
+            this.Controls.Add(this.pnTxbName);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
@@ -234,6 +310,9 @@ namespace PetStoreManagement
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerModule";
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddress)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPhone)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +334,11 @@ namespace PetStoreManagement
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btnClose;
+        private System.Windows.Forms.Panel pnTxbPhone;
+        private System.Windows.Forms.Panel pnTxbAddress;
+        private System.Windows.Forms.Panel pnTxbName;
+        private System.Windows.Forms.PictureBox pbName;
+        private System.Windows.Forms.PictureBox pbPhone;
+        private System.Windows.Forms.PictureBox pbAddress;
     }
 }

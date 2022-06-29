@@ -8,31 +8,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PetStoreManagement.BLL;
+using PetStoreManagement.DTO;
 
 namespace PetStoreManagement
 {
     public partial class LoginForm : Form
     {
-        bool drag = false;
-        Point startPoint = new Point(0, 0);
+        //SqlConnection cn = new SqlConnection();
+        //SqlCommand cm = new SqlCommand();
+        //SqlDataReader rd;
+        //DbConnect dbcon = new DbConnect();
 
-        SqlConnection cn = new SqlConnection();
-        SqlCommand cm = new SqlCommand();
-        SqlDataReader rd;
-        DbConnect dbcon = new DbConnect();
+        LoginBLL loginBLL = new LoginBLL();
         string title = "Pet Store Management System";
 
         ErrorProvider errProvider;
 
+        bool drag = false;
+        Point startPoint = new Point(0, 0);
+
         public LoginForm()
         {
             InitializeComponent();
+            //cn = new SqlConnection(dbcon.connection());
+
             AcceptButton = btnLogin;
             errProvider = new ErrorProvider();
+
             txbUsername.TextChanged += TxbUsername_TextChanged;
             txbPassword.TextChanged += TxbPassword_TextChanged;
-
-            cn = new SqlConnection(dbcon.connection());
 
             MouseUp += LoginForm_MouseUp;
             MouseDown += LoginForm_MouseDown;
@@ -90,24 +95,52 @@ namespace PetStoreManagement
             //{
 
             //}
-            if (validateInputData() || checkIsEmployee(txbUsername.Text, txbPassword.Text))
+            if (validateInputData() || checkLogin(txbUsername.Text, txbPassword.Text))
             {
                 try
                 {
-                    cn.Open();
-                    cm = new SqlCommand("select name, role from dbo.Userr where name = @name and password = @password", cn);
-                    cm.Parameters.Add("@name", SqlDbType.NVarChar).Value = txbUsername.Text;
-                    cm.Parameters.Add("@password", SqlDbType.VarChar).Value = txbPassword.Text;
+                    //cn.Open();
+                    //cm = new SqlCommand("select name, role from dbo.Userr where name = @name and password = @password", cn);
+                    //cm.Parameters.Add("@name", SqlDbType.NVarChar).Value = txbUsername.Text;
+                    //cm.Parameters.Add("@password", SqlDbType.VarChar).Value = txbPassword.Text;
 
-                    rd = cm.ExecuteReader();
-                    rd.Read();
-                    if (rd.HasRows)
+                    //rd = cm.ExecuteReader();
+                    //rd.Read();
+                    //if (rd.HasRows)
+                    //{
+                    //    string _name = rd["name"].ToString();
+                    //    string _role = rd["role"].ToString();
+
+                    //    errProvider.Dispose();
+                    //    MessageBox.Show("Welcome [" + _name + "] !", title);
+
+                    //    MainForm mf = new MainForm();
+                    //    mf.lblUsername.Text = _name;
+                    //    mf.lblRole.Text = _role;
+
+                    //    if (_role == "Administrator")
+                    //        mf.btnUser.Enabled = true;
+
+                    //    errProvider.Clear();
+                    //    Hide();
+                    //    mf.ShowDialog();
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Invalid Username or Password!", title);
+                    //    txbUsername.Focus();
+                    //}
+                    //rd.Close();
+                    //cn.Close();
+
+                    List<LoginDTO> list = loginBLL.getNameAndRole(txbUsername.Text, txbPassword.Text);
+                    foreach (LoginDTO login in list)
                     {
-                        string _name = rd["name"].ToString();
-                        string _role = rd["role"].ToString();
+                        string _name = login.Name;
+                        string _role = login.Role;
 
                         errProvider.Dispose();
-                        MessageBox.Show("Welcome [" + _name + "] !", title);
+                        MessageBox.Show("Welcome " + _name + "!", title);
 
                         MainForm mf = new MainForm();
                         mf.lblUsername.Text = _name;
@@ -120,13 +153,12 @@ namespace PetStoreManagement
                         Hide();
                         mf.ShowDialog();
                     }
-                    else
+
+                    if (!checkLogin(txbUsername.Text, txbPassword.Text))
                     {
                         MessageBox.Show("Invalid Username or Password!", title);
                         txbUsername.Focus();
                     }
-                    rd.Close();
-                    cn.Close();
                 }
                 catch (Exception ex)
                 {
@@ -161,6 +193,17 @@ namespace PetStoreManagement
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void chkbShowHide_CheckedChanged(object sender, EventArgs e)
+        {
+            txbPassword.Focus();
+            if (chkbShowHide.Checked)
+                //txbPassword.UseSystemPasswordChar = true;
+                txbPassword.PasswordChar = '\0';
+            else
+                //txbPassword.UseSystemPasswordChar = false;
+                txbPassword.PasswordChar = '♦';
         }
 
         #region Method
@@ -199,23 +242,26 @@ namespace PetStoreManagement
 
                 if (txbPassword.Text.Trim() == "")
                     errProvider.SetError(txbPassword, "Hãy nhập Password");
+
                 return false;
             }
             return true;
         }
 
-        bool checkIsEmployee(string _username, string _password)
+        bool checkLogin(string _username, string _password)
         {
-            DataTable data = new DataTable();
+            //DataTable data = new DataTable();
 
-            cn.Open();
+            //cn.Open();
 
-            cm = new SqlCommand("select * from dbo.Userr where name = '" + _username + "' and password = '" + _password + "'", cn);
-            SqlDataAdapter adapter = new SqlDataAdapter(cm);
-            adapter.Fill(data);
+            //cm = new SqlCommand("select * from dbo.Userr where name = '" + _username + "' and password = '" + _password + "'", cn);
+            //SqlDataAdapter adapter = new SqlDataAdapter(cm);
+            //adapter.Fill(data);
 
-            cn.Close();
-            return data.Rows.Count > 0;
+            //cn.Close();
+            //return data.Rows.Count > 0;
+
+            return loginBLL.checkLogin(_username, _password);
         }
         #endregion
     }

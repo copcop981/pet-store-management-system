@@ -53,7 +53,7 @@ namespace PetStoreManagement
             this.lblUsername = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pnChildForm = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnSeparate = new System.Windows.Forms.Panel();
             this.pnDash = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -235,6 +235,7 @@ namespace PetStoreManagement
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 55);
             this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.panel3.Size = new System.Drawing.Size(168, 561);
             this.panel3.TabIndex = 2;
             // 
@@ -260,13 +261,13 @@ namespace PetStoreManagement
             this.btnLogout.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnLogout.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.btnLogout.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnLogout.Location = new System.Drawing.Point(0, 516);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(168, 45);
+            this.btnLogout.Size = new System.Drawing.Size(158, 45);
             this.btnLogout.TabIndex = 6;
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -287,13 +288,13 @@ namespace PetStoreManagement
             this.btnCash.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnCash.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnCash.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnCash.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            this.btnCash.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btnCash.Image = ((System.Drawing.Image)(resources.GetObject("btnCash.Image")));
             this.btnCash.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCash.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnCash.Location = new System.Drawing.Point(0, 334);
             this.btnCash.Name = "btnCash";
-            this.btnCash.Size = new System.Drawing.Size(168, 45);
+            this.btnCash.Size = new System.Drawing.Size(158, 45);
             this.btnCash.TabIndex = 5;
             this.btnCash.Text = "Cash";
             this.btnCash.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -314,13 +315,13 @@ namespace PetStoreManagement
             this.btnProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnProduct.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnProduct.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnProduct.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            this.btnProduct.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
             this.btnProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProduct.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnProduct.Location = new System.Drawing.Point(0, 289);
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(168, 45);
+            this.btnProduct.Size = new System.Drawing.Size(158, 45);
             this.btnProduct.TabIndex = 4;
             this.btnProduct.Text = "Product";
             this.btnProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -330,9 +331,9 @@ namespace PetStoreManagement
             // btnUser
             // 
             this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUser.DisabledState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnUser.DisabledState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUser.Enabled = false;
@@ -342,13 +343,13 @@ namespace PetStoreManagement
             this.btnUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnUser.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnUser.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnUser.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
+            this.btnUser.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
             this.btnUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUser.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnUser.Location = new System.Drawing.Point(0, 244);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(168, 45);
+            this.btnUser.Size = new System.Drawing.Size(158, 45);
             this.btnUser.TabIndex = 3;
             this.btnUser.Text = "User";
             this.btnUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -369,13 +370,13 @@ namespace PetStoreManagement
             this.btnCustomers.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnCustomers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnCustomers.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnCustomers.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            this.btnCustomers.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btnCustomers.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomers.Image")));
             this.btnCustomers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCustomers.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnCustomers.Location = new System.Drawing.Point(0, 199);
             this.btnCustomers.Name = "btnCustomers";
-            this.btnCustomers.Size = new System.Drawing.Size(168, 45);
+            this.btnCustomers.Size = new System.Drawing.Size(158, 45);
             this.btnCustomers.TabIndex = 2;
             this.btnCustomers.Text = "Customers";
             this.btnCustomers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -396,13 +397,13 @@ namespace PetStoreManagement
             this.btnDashboard.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnDashboard.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnDashboard.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
+            this.btnDashboard.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnDashboard.Location = new System.Drawing.Point(0, 154);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(168, 45);
+            this.btnDashboard.Size = new System.Drawing.Size(158, 45);
             this.btnDashboard.TabIndex = 1;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -417,7 +418,7 @@ namespace PetStoreManagement
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(168, 154);
+            this.panel4.Size = new System.Drawing.Size(158, 154);
             this.panel4.TabIndex = 0;
             // 
             // lblRole
@@ -459,14 +460,14 @@ namespace PetStoreManagement
             this.pnChildForm.Size = new System.Drawing.Size(814, 267);
             this.pnChildForm.TabIndex = 3;
             // 
-            // panel6
+            // pnSeparate
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(168, 322);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(814, 6);
-            this.panel6.TabIndex = 4;
+            this.pnSeparate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.pnSeparate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnSeparate.Location = new System.Drawing.Point(168, 322);
+            this.pnSeparate.Name = "pnSeparate";
+            this.pnSeparate.Size = new System.Drawing.Size(814, 6);
+            this.pnSeparate.TabIndex = 4;
             // 
             // pnDash
             // 
@@ -676,7 +677,7 @@ namespace PetStoreManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(988, 616);
             this.Controls.Add(this.pnDash);
-            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.pnSeparate);
             this.Controls.Add(this.pnChildForm);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -727,7 +728,7 @@ namespace PetStoreManagement
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnNav;
         private System.Windows.Forms.Panel pnChildForm;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnSeparate;
         private System.Windows.Forms.Panel pnDash;
         public System.Windows.Forms.Label lblRole;
         public System.Windows.Forms.Label lblUsername;

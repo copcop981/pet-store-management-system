@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace PetStoreManagement.DTO
 {
-    public class UserDTO
+    internal class UserDTO
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string address { get; set; }
-        public string phone { get; set; }
-        public string role { get; set; }
-        public DateTime birth { get; set; }
-        public string password { get; set; }
+        internal int Id { get; set; }
+        internal string Name { get; set; }
+        internal string Address { get; set; }
+        internal string Phone { get; set; }
+        internal string Role { get; set; }
+        internal DateTime Birth { get; set; }
+        internal string Password { get; set; }
     }
 }

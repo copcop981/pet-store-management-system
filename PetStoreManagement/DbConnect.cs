@@ -8,10 +8,10 @@ using System.Data.SqlClient;
 
 namespace PetStoreManagement
 {
-    class DbConnect
+    internal class DbConnect
     {
-        SqlConnection cn = new SqlConnection();
-        SqlCommand cm = new SqlCommand();
+        internal SqlConnection cn = new SqlConnection();
+        internal SqlCommand cm = new SqlCommand();
         private string con;
 
         public string connection()

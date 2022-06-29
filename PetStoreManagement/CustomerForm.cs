@@ -8,22 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using PetStoreManagement.BLL;
+using PetStoreManagement.DTO;
 
 namespace PetStoreManagement
 {
     public partial class CustomerForm : Form
     {
-        SqlConnection cn = new SqlConnection();
-        SqlCommand cm = new SqlCommand();
-        SqlDataReader rd;
-        DbConnect dbcon = new DbConnect();
+        //SqlConnection cn = new SqlConnection();
+        //SqlCommand cm = new SqlCommand();
+        //SqlDataReader rd;
+        //DbConnect dbcon = new DbConnect();
+
+        CustomerBLL cusBLL = new CustomerBLL();
         string title = "Pet Store Management System";
 
         public CustomerForm()
         {
             InitializeComponent();
 
-            cn = new SqlConnection(dbcon.connection());
+            //cn = new SqlConnection(dbcon.connection());
             loadCustomerList();
         }
 
@@ -65,11 +69,13 @@ namespace PetStoreManagement
                 {
                     if (MessageBox.Show("Are you sure you want to Delete This Customer?", title, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        cn.Open();
-                        cm = new SqlCommand($"delete from dbo.Customer where Cid = {gridCustomer.Rows[e.RowIndex].Cells[1].Value}", cn);
-                        cm.ExecuteNonQuery();
-                        cn.Close();
-                        MessageBox.Show("Customer has been Successfully Deleted!", title);
+                        //cn.Open();
+                        //cm = new SqlCommand($"delete from dbo.Customer where Cid = {gridCustomer.Rows[e.RowIndex].Cells[1].Value}", cn);
+                        //cm.ExecuteNonQuery();
+                        //cn.Close();
+                        int result = cusBLL.deleteCustomer((int)gridCustomer.Rows[e.RowIndex].Cells[1].Value);
+                        if(result > 0)
+                            MessageBox.Show("Customer has been Successfully Deleted!", title);
                     }
                 }
                 loadCustomerList();
@@ -83,24 +89,38 @@ namespace PetStoreManagement
         #region Method
         public void loadCustomerList()
         {
+            //cm = new SqlCommand($"select * from dbo.Customer where concat(Cname, Caddress, Cphone) like '%{txbSearch.Text}%'", cn);
+            //cn.Open();
+            //rd = cm.ExecuteReader();
+            //while (rd.Read())
+            //{
+            //    i++;
+            //    int id = (int)rd[0];
+            //    string name = rd[1].ToString();
+            //    string address = rd[2].ToString();
+            //    string phone = rd[3].ToString();
+
+            //    gridCustomer.Rows.Add(i, id, name, address, phone);
+            //}
+            //rd.Close();
+            //cn.Close();
+
+            List<CustomerDTO> cusList = cusBLL.getAllCustomer(txbSearch.Text);
+
             int i = 0;
             gridCustomer.Rows.Clear();
 
-            cm = new SqlCommand($"select * from dbo.Customer where concat(Cname, Caddress, Cphone) like '%{txbSearch.Text}%'", cn);
-            cn.Open();
-            rd = cm.ExecuteReader();
-            while (rd.Read())
+            foreach (CustomerDTO cus in cusList)
             {
                 i++;
-                int id = (int)rd[0];
-                string name = rd[1].ToString();
-                string address = rd[2].ToString();
-                string phone = rd[3].ToString();
+                int cId = cus.Cid;
+                string cName = cus.Cname;
+                string cAddress = cus.Caddress;
+                string cPhone = cus.Cphone;
 
-                gridCustomer.Rows.Add(i, id, name, address, phone);
+                gridCustomer.Rows.Add(i, cId, cName, cAddress, cPhone);
             }
-            rd.Close();
-            cn.Close();
+
             if (gridCustomer.Rows.Count == 0)
                 picBoxNoItemsFound.Visible = true;
             else

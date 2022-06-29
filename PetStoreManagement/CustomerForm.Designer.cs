@@ -48,6 +48,7 @@ namespace PetStoreManagement
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gridCustomer = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.picBoxNoItemsFound = new System.Windows.Forms.PictureBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +56,6 @@ namespace PetStoreManagement
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editt = new System.Windows.Forms.DataGridViewImageColumn();
             this.Deletee = new System.Windows.Forms.DataGridViewImageColumn();
-            this.picBoxNoItemsFound = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNoItemsFound)).BeginInit();
@@ -240,6 +240,19 @@ namespace PetStoreManagement
             this.gridCustomer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gridCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridCustomer_CellContentClick);
             // 
+            // picBoxNoItemsFound
+            // 
+            this.picBoxNoItemsFound.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picBoxNoItemsFound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoItemsFound.Image")));
+            this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 49);
+            this.picBoxNoItemsFound.Name = "picBoxNoItemsFound";
+            this.picBoxNoItemsFound.Size = new System.Drawing.Size(814, 218);
+            this.picBoxNoItemsFound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxNoItemsFound.TabIndex = 7;
+            this.picBoxNoItemsFound.TabStop = false;
+            this.picBoxNoItemsFound.Visible = false;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -254,6 +267,7 @@ namespace PetStoreManagement
             this.dataGridViewTextBoxColumn2.HeaderText = "ID";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Visible = false;
             this.dataGridViewTextBoxColumn2.Width = 44;
             // 
             // dataGridViewTextBoxColumn3
@@ -298,19 +312,6 @@ namespace PetStoreManagement
             this.Deletee.ReadOnly = true;
             this.Deletee.Width = 30;
             // 
-            // picBoxNoItemsFound
-            // 
-            this.picBoxNoItemsFound.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBoxNoItemsFound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoItemsFound.Image")));
-            this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 49);
-            this.picBoxNoItemsFound.Name = "picBoxNoItemsFound";
-            this.picBoxNoItemsFound.Size = new System.Drawing.Size(814, 218);
-            this.picBoxNoItemsFound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxNoItemsFound.TabIndex = 7;
-            this.picBoxNoItemsFound.TabStop = false;
-            this.picBoxNoItemsFound.Visible = false;
-            // 
             // CustomerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -346,6 +347,7 @@ namespace PetStoreManagement
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2DataGridView gridCustomer;
+        private System.Windows.Forms.PictureBox picBoxNoItemsFound;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -353,6 +355,5 @@ namespace PetStoreManagement
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewImageColumn Editt;
         private System.Windows.Forms.DataGridViewImageColumn Deletee;
-        private System.Windows.Forms.PictureBox picBoxNoItemsFound;
     }
 }

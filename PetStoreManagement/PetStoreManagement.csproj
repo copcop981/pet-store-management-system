@@ -86,6 +86,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CashBLL.cs" />
+    <Compile Include="BLL\CashCustomerBLL.cs" />
+    <Compile Include="BLL\CashProductBLL.cs" />
+    <Compile Include="BLL\CustomerBLL.cs" />
+    <Compile Include="BLL\DashboardBLL.cs" />
+    <Compile Include="BLL\LoginBLL.cs" />
+    <Compile Include="BLL\ProductBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="CashCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,7 +124,14 @@
     <Compile Include="CustomerModule.Designer.cs">
       <DependentUpon>CustomerModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="DAL\DataProvider.cs" />
+    <Compile Include="DAL\CashCustomerDAL.cs" />
+    <Compile Include="DAL\CashDAL.cs" />
+    <Compile Include="DAL\CashProductDAL.cs" />
+    <Compile Include="DAL\CustomerDAL.cs" />
+    <Compile Include="DAL\DashboardDAL.cs" />
+    <Compile Include="DAL\LoginDAL.cs" />
+    <Compile Include="DAL\ProductDAL.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,7 +139,12 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="DbConnect.cs" />
+    <Compile Include="DTO\CustomerDTO.cs" />
     <Compile Include="DTO\InvoiceDTO.cs" />
+    <Compile Include="DTO\LoginDTO.cs" />
+    <Compile Include="DTO\MiddleTemporaryDataDTO.cs" />
+    <Compile Include="DTO\ProductDTO.cs" />
+    <Compile Include="DTO\TemporaryDataDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -247,17 +267,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
     <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -283,9 +295,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

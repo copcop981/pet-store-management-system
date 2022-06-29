@@ -8,22 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using PetStoreManagement.BLL;
+using PetStoreManagement.DTO;
 
 namespace PetStoreManagement
 {
     public partial class UserForm : Form
     {
-        SqlConnection cn = new SqlConnection();
-        SqlCommand cm = new SqlCommand();
-        SqlDataReader rd;
-        DbConnect dbcon = new DbConnect();
+        //SqlConnection cn = new SqlConnection();
+        //SqlCommand cm = new SqlCommand();
+        //SqlDataReader rd;
+        //DbConnect dbcon = new DbConnect();
+
+        UserBLL userBLL = new UserBLL();
         string title = "Pet Store Management System";
 
         public UserForm()
         {
             InitializeComponent();
 
-            cn = new SqlConnection(dbcon.connection());
+            //cn = new SqlConnection(dbcon.connection());
             loadUserList();
         }
 
@@ -68,11 +72,13 @@ namespace PetStoreManagement
                 {
                     if(MessageBox.Show("Are you sure you want to Delete This User?", title, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        cn.Open();
-                        cm = new SqlCommand($"delete from dbo.Userr where id = {gridUser.Rows[e.RowIndex].Cells[1].Value}", cn);
-                        cm.ExecuteNonQuery();
-                        cn.Close();
-                        MessageBox.Show("User has been Successfully Deleted!", title);
+                        //cn.Open();
+                        //cm = new SqlCommand($"delete from dbo.Userr where id = {gridUser.Rows[e.RowIndex].Cells[1].Value}", cn);
+                        //cm.ExecuteNonQuery();
+                        //cn.Close();
+                        int result = userBLL.deleteUser((int)gridUser.Rows[e.RowIndex].Cells[1].Value);
+                        if(result > 0)
+                            MessageBox.Show("User has been Successfully Deleted!", title);
                     }
                 }
                 loadUserList();
@@ -86,31 +92,55 @@ namespace PetStoreManagement
         #region Method
         public void loadUserList()
         {
-            int i = 0;
-            gridUser.Rows.Clear();
-
-            cm = new SqlCommand($"select * from dbo.Userr where concat(name, address, phone, role, birth) like '%{txbSearch.Text}%'", cn);
-            cn.Open();
-            rd = cm.ExecuteReader();
-            while (rd.Read())
+            try
             {
-                i++;
-                int id = (int)rd[0];
-                string name = rd[1].ToString();
-                string address = rd[2].ToString();
-                string phone = rd[3].ToString();
-                string role = rd[4].ToString();
-                DateTime birth = (DateTime)rd[5];
-                string password = rd[6].ToString();
+                //cm = new SqlCommand($"select * from dbo.Userr where concat(name, address, phone, role, birth) like '%{txbSearch.Text}%'", cn);
+                //cn.Open();
+                //rd = cm.ExecuteReader();
+                //while (rd.Read())
+                //{
+                //    i++;
+                //    int id = (int)rd[0];
+                //    string name = rd[1].ToString();
+                //    string address = rd[2].ToString();
+                //    string phone = rd[3].ToString();
+                //    string role = rd[4].ToString();
+                //    DateTime birth = (DateTime)rd[5];
+                //    string password = rd[6].ToString();
 
-                gridUser.Rows.Add(i, id, name, address, phone, role, birth, password);
+                //    gridUser.Rows.Add(i, id, name, address, phone, role, birth, password);
+                //}
+                //rd.Close();
+                //cn.Close();
+
+                List<UserDTO> userList = userBLL.getAllUser(txbSearch.Text);
+
+                int i = 0;
+                gridUser.Rows.Clear();
+
+                foreach (UserDTO user in userList)
+                {
+                    i++;
+                    int id = user.Id;
+                    string name = user.Name;
+                    string address = user.Address;
+                    string phone = user.Phone;
+                    string role = user.Role;
+                    DateTime birth = user.Birth;
+                    string password = user.Password;
+
+                    gridUser.Rows.Add(i, id, name, address, phone, role, birth, password);
+                }
+
+                if (gridUser.Rows.Count == 0)
+                    picBoxNoItemsFound.Visible = true;
+                else
+                    picBoxNoItemsFound.Visible = false;
             }
-            rd.Close();
-            cn.Close();
-            if (gridUser.Rows.Count == 0)
-                picBoxNoItemsFound.Visible = true;
-            else
-                picBoxNoItemsFound.Visible = false;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, title);
+            }
         }
         #endregion
     }

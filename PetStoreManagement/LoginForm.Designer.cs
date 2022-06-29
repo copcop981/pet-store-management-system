@@ -46,6 +46,7 @@ namespace PetStoreManagement
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2Button();
             this.btnMaximize = new Guna.UI2.WinForms.Guna2Button();
+            this.chkbShowHide = new Guna.UI2.WinForms.Guna2CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -148,7 +149,7 @@ namespace PetStoreManagement
             // txbUsername
             // 
             this.txbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbUsername.DefaultText = "admin";
+            this.txbUsername.DefaultText = "";
             this.txbUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txbUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txbUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -168,8 +169,9 @@ namespace PetStoreManagement
             // 
             // txbPassword
             // 
+            this.txbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbPassword.DefaultText = "admin";
+            this.txbPassword.DefaultText = "";
             this.txbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -194,7 +196,7 @@ namespace PetStoreManagement
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(327, 228);
+            this.btnLogin.Location = new System.Drawing.Point(327, 261);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(144, 45);
             this.btnLogin.TabIndex = 14;
@@ -209,7 +211,7 @@ namespace PetStoreManagement
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(504, 228);
+            this.btnCancel.Location = new System.Drawing.Point(504, 261);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(144, 45);
             this.btnCancel.TabIndex = 15;
@@ -287,11 +289,31 @@ namespace PetStoreManagement
             this.btnMaximize.Size = new System.Drawing.Size(25, 25);
             this.btnMaximize.TabIndex = 17;
             // 
+            // chkbShowHide
+            // 
+            this.chkbShowHide.AutoSize = true;
+            this.chkbShowHide.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chkbShowHide.CheckedState.BorderRadius = 0;
+            this.chkbShowHide.CheckedState.BorderThickness = 0;
+            this.chkbShowHide.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chkbShowHide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkbShowHide.Location = new System.Drawing.Point(327, 223);
+            this.chkbShowHide.Name = "chkbShowHide";
+            this.chkbShowHide.Size = new System.Drawing.Size(142, 24);
+            this.chkbShowHide.TabIndex = 23;
+            this.chkbShowHide.Text = "Show Password";
+            this.chkbShowHide.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chkbShowHide.UncheckedState.BorderRadius = 0;
+            this.chkbShowHide.UncheckedState.BorderThickness = 0;
+            this.chkbShowHide.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chkbShowHide.CheckedChanged += new System.EventHandler(this.chkbShowHide_CheckedChanged);
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(741, 402);
+            this.Controls.Add(this.chkbShowHide);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
@@ -332,5 +354,6 @@ namespace PetStoreManagement
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btnMinimize;
         private Guna.UI2.WinForms.Guna2Button btnMaximize;
+        private Guna.UI2.WinForms.Guna2CheckBox chkbShowHide;
     }
 }

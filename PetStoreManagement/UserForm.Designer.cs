@@ -213,6 +213,7 @@ namespace PetStoreManagement
             this.Column2.HeaderText = "ID";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
             this.Column2.Width = 44;
             // 
             // Column3
@@ -323,6 +324,7 @@ namespace PetStoreManagement
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Guna.UI2.WinForms.Guna2DataGridView gridUser;
+        private System.Windows.Forms.PictureBox picBoxNoItemsFound;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -333,6 +335,5 @@ namespace PetStoreManagement
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
-        private System.Windows.Forms.PictureBox picBoxNoItemsFound;
     }
 }

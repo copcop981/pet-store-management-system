@@ -45,6 +45,10 @@ insert dbo.Product values (N'Quaker', N'Bird', N'Bird', 100, 30000)
 insert dbo.Product values (N'Cockatoo', N'Bird', N'Bird', 400, 60000)
 insert dbo.Product values (N'Conure', N'Bird', N'Bird', 300, 40000)
 
+update dbo.Product set Pquantity = Pquantity - 1 where Pid = 7
+
+select isnull(sum(Pquantity), 0) from dbo.Product where Pcategory = N'Dog'
+
 SELECT CashId, TransactionNo, Pid, Pname, Quantity, Price, Total, c.Cname, Cashier 
                                     FROM dbo.TemporaryData AS cash LEFT JOIN dbo.Customer c ON cash.Cid = c.Cid 
                                     WHERE TransactionNo LIKE '%%'
@@ -79,6 +83,8 @@ begin
 end
 
 exec dbo.GetAll
+
+
 
 
 

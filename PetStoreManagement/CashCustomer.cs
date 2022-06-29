@@ -8,15 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using PetStoreManagement.BLL;
+using PetStoreManagement.DTO;
 
 namespace PetStoreManagement
 {
     public partial class CashCustomer : Form
     {
-        SqlConnection cn = new SqlConnection();
-        SqlCommand cm = new SqlCommand();
-        SqlDataReader rd;
-        DbConnect dbcon = new DbConnect();
+        //SqlConnection cn = new SqlConnection();
+        //SqlCommand cm = new SqlCommand();
+        //SqlDataReader rd;
+        //DbConnect dbcon = new DbConnect();
+
+        CashCustomerBLL cashCusBLL = new CashCustomerBLL();
         public string uName;
         string title = "Pet Store Management System";
 
@@ -29,7 +33,7 @@ namespace PetStoreManagement
         {
             InitializeComponent();
 
-            cn = new SqlConnection(dbcon.connection());
+            //cn = new SqlConnection(dbcon.connection());
             loadCustomerList();
             cashForm = cash;
 
@@ -67,10 +71,16 @@ namespace PetStoreManagement
             string colName = gridCustomer.Columns[e.ColumnIndex].Name;
             if (colName == "Choice")
             {
-                cn.Open();
-                cm = new SqlCommand("update dbo.TemporaryData set Cid = " + gridCustomer.Rows[e.RowIndex].Cells[1].Value + " where TransactionNo = '" + cashForm.lblTransNo.Text + "'", cn);
-                cm.ExecuteNonQuery();
-                cn.Close();
+                //cn.Open();
+                //cm = new SqlCommand("update dbo.TemporaryData set Cid = " + gridCustomer.Rows[e.RowIndex].Cells[1].Value + " where TransactionNo = '" + cashForm.lblTransNo.Text + "'", cn);
+                //cm.ExecuteNonQuery();
+                //cn.Close();
+
+                int cId = (int)gridCustomer.Rows[e.RowIndex].Cells[1].Value;
+                string transNo = cashForm.lblTransNo.Text;
+
+                cashCusBLL.submitChoiceCustomer(cId, transNo);
+
                 cashForm.loadCashTempDataList();
                 cashForm.btnCash.Enabled = true;
                 //cashForm.btnInvoice.Enabled = true;
@@ -93,23 +103,35 @@ namespace PetStoreManagement
         {
             try
             {
+                //cm = new SqlCommand($"select Cid, Cname, Cphone from dbo.Customer where Cname like '%{txbSearch.Text}%'", cn);
+                //cn.Open();
+                //rd = cm.ExecuteReader();
+                //while (rd.Read())
+                //{
+                //    i++;
+                //    int id = (int)rd[0];
+                //    string name = rd[1].ToString();
+                //    string phone = rd[2].ToString();
+
+                //    gridCustomer.Rows.Add(i, id, name, phone);
+                //}
+                //rd.Close();
+                //cn.Close();
+
                 int i = 0;
                 gridCustomer.Rows.Clear();
 
-                cm = new SqlCommand($"select Cid, Cname, Cphone from dbo.Customer where Cname like '%{txbSearch.Text}%'", cn);
-                cn.Open();
-                rd = cm.ExecuteReader();
-                while (rd.Read())
+                List<CustomerDTO> cusList = cashCusBLL.getAllCustomer(txbSearch.Text);
+                foreach(CustomerDTO cus in cusList)
                 {
                     i++;
-                    int id = (int)rd[0];
-                    string name = rd[1].ToString();
-                    string phone = rd[2].ToString();
+                    int cId = cus.Cid;
+                    string cName = cus.Cname;
+                    string cPhone = cus.Cphone;
 
-                    gridCustomer.Rows.Add(i, id, name, phone);
+                    gridCustomer.Rows.Add(i, cId, cName, cPhone);
                 }
-                rd.Close();
-                cn.Close();
+
                 if (gridCustomer.Rows.Count == 0)
                     picBoxNoItemsFound.Visible = true;
                 else
