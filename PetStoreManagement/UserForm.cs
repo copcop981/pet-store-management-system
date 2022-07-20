@@ -21,6 +21,7 @@ namespace PetStoreManagement
         //DbConnect dbcon = new DbConnect();
 
         UserBLL userBLL = new UserBLL();
+        UserRoleBLL urBLL = new UserRoleBLL();
         string title = "Pet Store Management System";
 
         public UserForm()
@@ -29,11 +30,60 @@ namespace PetStoreManagement
 
             //cn = new SqlConnection(dbcon.connection());
             loadUserList();
+            loadUserRoleList();
+            Load += UserForm_Load;
+        }
+
+        private void UserForm_Load(object sender, EventArgs e)
+        {
+            cbbUserRoleList.SelectedIndex = 0;
         }
 
         private void txbSearch_TextChanged(object sender, EventArgs e)
         {
             loadUserList();
+        }
+
+        private void cbbUserRoleList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbbUserRoleList.SelectedIndex == -1) return;
+
+                string userRole = cbbUserRoleList.Text;
+                if (cbbUserRoleList.Text == "All")
+                {
+                    loadUserList();
+                    return;
+                }
+
+                List<UserDTO> userList = urBLL.getUserByUserRole(userRole);
+
+                int i = 0;
+                gridUser.Rows.Clear();
+                foreach (UserDTO userr in userList)
+                {
+                    i++;
+                    int id = userr.Id;
+                    string name = userr.Name;
+                    string address = userr.Address;
+                    string phone = userr.Phone;
+                    string role = userr.Role;
+                    DateTime birth = userr.Birth;
+                    string password = userr.Password;
+
+                    gridUser.Rows.Add(i, id, name, address, phone, role, birth, password);
+                }
+
+                if (gridUser.Rows.Count == 0)
+                    picBoxNoItemsFound.Visible = true;
+                else
+                    picBoxNoItemsFound.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -70,14 +120,14 @@ namespace PetStoreManagement
                 }
                 else if (colName == "Delete")
                 {
-                    if(MessageBox.Show("Are you sure you want to Delete This User?", title, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    if (MessageBox.Show("Are you sure you want to Delete This User?", title, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
                         //cn.Open();
                         //cm = new SqlCommand($"delete from dbo.Userr where id = {gridUser.Rows[e.RowIndex].Cells[1].Value}", cn);
                         //cm.ExecuteNonQuery();
                         //cn.Close();
                         int result = userBLL.deleteUser((int)gridUser.Rows[e.RowIndex].Cells[1].Value);
-                        if(result > 0)
+                        if (result > 0)
                             MessageBox.Show("User has been Successfully Deleted!", title);
                     }
                 }
@@ -90,6 +140,22 @@ namespace PetStoreManagement
         }
 
         #region Method
+        public void loadUserRoleList()
+        {
+            try
+            {
+                List<UserRoleDTO> urList = urBLL.getAllUserRole();
+
+                cbbUserRoleList.Items.Clear();
+                foreach (UserRoleDTO ur in urList)
+                    cbbUserRoleList.Items.Add(ur.UserRole);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public void loadUserList()
         {
             try
@@ -113,6 +179,7 @@ namespace PetStoreManagement
                 //rd.Close();
                 //cn.Close();
 
+                cbbUserRoleList.Text = "All";
                 List<UserDTO> userList = userBLL.getAllUser(txbSearch.Text);
 
                 int i = 0;
@@ -142,6 +209,7 @@ namespace PetStoreManagement
                 MessageBox.Show(ex.Message, title);
             }
         }
+
         #endregion
     }
 }

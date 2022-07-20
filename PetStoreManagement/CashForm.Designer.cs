@@ -36,16 +36,6 @@ namespace PetStoreManagement
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.gridCash = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnCash = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblTransNo = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
-            this.picBoxNoItemsFound = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +48,16 @@ namespace PetStoreManagement
             this.Increase = new System.Windows.Forms.DataGridViewImageColumn();
             this.Decrease = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCash = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblTransNo = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnAddProduct = new Guna.UI2.WinForms.Guna2Button();
+            this.picBoxNoItemsFound = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridCash)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNoItemsFound)).BeginInit();
@@ -149,6 +149,106 @@ namespace PetStoreManagement
             this.gridCash.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridCash.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gridCash.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridCash_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.HeaderText = "S.N.";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 56;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Cash ID";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.HeaderText = "Product ID";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            this.Column3.Width = 89;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "Name";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column6.HeaderText = "Qty";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 54;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column5.HeaderText = "Price";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 63;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column7.HeaderText = "Total";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 62;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column8.HeaderText = "Customer Name";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 123;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column9.HeaderText = "Cashier";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 81;
+            // 
+            // Increase
+            // 
+            this.Increase.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Increase.HeaderText = "";
+            this.Increase.Image = ((System.Drawing.Image)(resources.GetObject("Increase.Image")));
+            this.Increase.MinimumWidth = 30;
+            this.Increase.Name = "Increase";
+            this.Increase.ReadOnly = true;
+            this.Increase.Width = 30;
+            // 
+            // Decrease
+            // 
+            this.Decrease.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Decrease.HeaderText = "";
+            this.Decrease.Image = ((System.Drawing.Image)(resources.GetObject("Decrease.Image")));
+            this.Decrease.MinimumWidth = 30;
+            this.Decrease.Name = "Decrease";
+            this.Decrease.ReadOnly = true;
+            this.Decrease.Width = 30;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete.HeaderText = "";
+            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
+            this.Delete.MinimumWidth = 30;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Width = 30;
             // 
             // panel2
             // 
@@ -278,7 +378,8 @@ namespace PetStoreManagement
             // 
             // picBoxNoItemsFound
             // 
-            this.picBoxNoItemsFound.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.picBoxNoItemsFound.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picBoxNoItemsFound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoItemsFound.Image")));
             this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 49);
@@ -288,106 +389,6 @@ namespace PetStoreManagement
             this.picBoxNoItemsFound.TabIndex = 9;
             this.picBoxNoItemsFound.TabStop = false;
             this.picBoxNoItemsFound.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "S.N.";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 56;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Cash ID";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column3.HeaderText = "Product ID";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Visible = false;
-            this.Column3.Width = 89;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Name";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.HeaderText = "Qty";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 54;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column5.HeaderText = "Price";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 63;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column7.HeaderText = "Total";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 62;
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column8.HeaderText = "Customer Name";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 123;
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column9.HeaderText = "Cashier";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 81;
-            // 
-            // Increase
-            // 
-            this.Increase.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Increase.HeaderText = "";
-            this.Increase.Image = ((System.Drawing.Image)(resources.GetObject("Increase.Image")));
-            this.Increase.MinimumWidth = 30;
-            this.Increase.Name = "Increase";
-            this.Increase.ReadOnly = true;
-            this.Increase.Width = 30;
-            // 
-            // Decrease
-            // 
-            this.Decrease.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Decrease.HeaderText = "";
-            this.Decrease.Image = ((System.Drawing.Image)(resources.GetObject("Decrease.Image")));
-            this.Decrease.MinimumWidth = 30;
-            this.Decrease.Name = "Decrease";
-            this.Decrease.ReadOnly = true;
-            this.Decrease.Width = 30;
-            // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete.HeaderText = "";
-            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
-            this.Delete.MinimumWidth = 30;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Width = 30;
             // 
             // CashForm
             // 

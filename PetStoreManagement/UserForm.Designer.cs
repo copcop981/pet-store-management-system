@@ -37,6 +37,7 @@ namespace PetStoreManagement
             this.panel1 = new System.Windows.Forms.Panel();
             this.txbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbbUserRoleList = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.gridUser = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,6 +91,7 @@ namespace PetStoreManagement
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.cbbUserRoleList);
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.txbSearch);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -97,6 +99,24 @@ namespace PetStoreManagement
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(814, 39);
             this.panel2.TabIndex = 2;
+            // 
+            // cbbUserRoleList
+            // 
+            this.cbbUserRoleList.BackColor = System.Drawing.Color.Transparent;
+            this.cbbUserRoleList.BorderColor = System.Drawing.Color.White;
+            this.cbbUserRoleList.BorderRadius = 20;
+            this.cbbUserRoleList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbUserRoleList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbUserRoleList.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbUserRoleList.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbUserRoleList.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbUserRoleList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbUserRoleList.ItemHeight = 30;
+            this.cbbUserRoleList.Location = new System.Drawing.Point(116, 2);
+            this.cbbUserRoleList.Name = "cbbUserRoleList";
+            this.cbbUserRoleList.Size = new System.Drawing.Size(271, 36);
+            this.cbbUserRoleList.TabIndex = 20;
+            this.cbbUserRoleList.SelectedIndexChanged += new System.EventHandler(this.cbbUserRoleList_SelectedIndexChanged);
             // 
             // btnAdd
             // 
@@ -287,7 +307,8 @@ namespace PetStoreManagement
             // 
             // picBoxNoItemsFound
             // 
-            this.picBoxNoItemsFound.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.picBoxNoItemsFound.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picBoxNoItemsFound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoItemsFound.Image")));
             this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 49);
@@ -335,5 +356,6 @@ namespace PetStoreManagement
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbUserRoleList;
     }
 }

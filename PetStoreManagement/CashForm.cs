@@ -16,6 +16,7 @@ namespace PetStoreManagement
     public partial class CashForm : Form
     {
         CashBLL cashBLL = new CashBLL();
+        RevenueBLL revenueBLL = new RevenueBLL();
         string title = "Pet Store Management System";
 
         MainForm mainForm;
@@ -26,7 +27,7 @@ namespace PetStoreManagement
 
             mainForm = mainF;
             getTransNo();
-            loadCashTempDataList();
+            //loadCashTempDataList();
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
@@ -42,7 +43,7 @@ namespace PetStoreManagement
             ccForm.ShowDialog();
             //btnCash.Enabled = true;
         }
-        
+
         private void btnCash_Click(object sender, EventArgs e)
         {
             List<InvoiceDTO> ds = new List<InvoiceDTO>();
@@ -61,7 +62,6 @@ namespace PetStoreManagement
 
 
                     // GET CUSTOMER ID BY CUSTOMER NAME
-
                     //int customerId = -1;
                     //string customerName = gridCash.Rows[i].Cells[7].Value.ToString();
                     //cn.Open();
@@ -111,19 +111,18 @@ namespace PetStoreManagement
                     iv.Total = (int)gridCash.Rows[i].Cells[4].Value * (int)gridCash.Rows[i].Cells[5].Value;
                     iv.Cname = gridCash.Rows[i].Cells[7].Value.ToString();
                     iv.Cashier = gridCash.Rows[i].Cells[8].Value.ToString();
-
                     ds.Add(iv);
+
+                    // STORE INVOICE INFO TO MANAGE REVENUE
+                    DateTime dateTime = DateTime.Now;
+                    revenueBLL.storeRevenue(dateTime, transNo, pName, quantity, price, total, cashier);
                 }
 
-                // CONFIRM TO PRINT INVOICE
-                DialogResult dlR2 = MessageBox.Show("Would you like to print an invoice?", title, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dlR2 == DialogResult.Yes)
-                {
-                    InvoiceForm f = new InvoiceForm(ds, lblTotal.Text);
-                    f.ShowDialog();
-                }
+                // PRINT INVOICE
+                InvoiceForm f = new InvoiceForm(ds, lblTotal.Text);
+                f.ShowDialog();
             }
-            
+
             if (gridCash.Rows.Count == 0)
             {
                 btnAddCustomer.Visible = false;
@@ -144,7 +143,7 @@ namespace PetStoreManagement
 
         private void btnInvoice_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnInvoice_MouseHover(object sender, EventArgs e)
@@ -155,7 +154,7 @@ namespace PetStoreManagement
         private void gridCash_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string colName = gridCash.Columns[e.ColumnIndex].Name;
-            if(colName == "Delete")
+            if (colName == "Delete")
             {
                 if (MessageBox.Show("Are you sure you want to Delete This Cash?", title, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
@@ -168,9 +167,9 @@ namespace PetStoreManagement
                     cashBLL.deleteCash((int)gridCash.Rows[e.RowIndex].Cells[1].Value);
                     MessageBox.Show("Cash has been Successfully Deleted!", title);
                 }
-                
+
             }
-            else if(colName == "Increase")
+            else if (colName == "Increase")
             {
                 // INCREASE THE NUMBER OF PRODUCTS
 
@@ -180,7 +179,7 @@ namespace PetStoreManagement
                 //cn.Close();
                 cashBLL.increaseProductsNumber((int)gridCash.Rows[e.RowIndex].Cells[1].Value);
             }
-            else if(colName == "Decrease")
+            else if (colName == "Decrease")
             {
                 // DECREASE THE NUMBER OF PRODUCTS
 
@@ -277,7 +276,7 @@ namespace PetStoreManagement
                 gridCash.Rows.Clear();
 
                 List<MiddleTemporaryDataDTO> middleTempDataList = cashBLL.getCashTempDataList(lblTransNo.Text);
-                foreach(MiddleTemporaryDataDTO middleTempData in middleTempDataList)
+                foreach (MiddleTemporaryDataDTO middleTempData in middleTempDataList)
                 {
                     i++;
                     int cashId = middleTempData.CashId;

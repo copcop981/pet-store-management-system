@@ -89,11 +89,15 @@
     <Compile Include="BLL\CashBLL.cs" />
     <Compile Include="BLL\CashCustomerBLL.cs" />
     <Compile Include="BLL\CashProductBLL.cs" />
+    <Compile Include="BLL\CategoryBLL.cs" />
     <Compile Include="BLL\CustomerBLL.cs" />
     <Compile Include="BLL\DashboardBLL.cs" />
     <Compile Include="BLL\LoginBLL.cs" />
+    <Compile Include="BLL\MainBLL.cs" />
     <Compile Include="BLL\ProductBLL.cs" />
+    <Compile Include="BLL\RevenueBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="BLL\UserRoleBLL.cs" />
     <Compile Include="CashCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,11 +131,15 @@
     <Compile Include="DAL\CashCustomerDAL.cs" />
     <Compile Include="DAL\CashDAL.cs" />
     <Compile Include="DAL\CashProductDAL.cs" />
+    <Compile Include="DAL\CategoryDAL.cs" />
     <Compile Include="DAL\CustomerDAL.cs" />
     <Compile Include="DAL\DashboardDAL.cs" />
     <Compile Include="DAL\LoginDAL.cs" />
+    <Compile Include="DAL\MainDAL.cs" />
     <Compile Include="DAL\ProductDAL.cs" />
+    <Compile Include="DAL\RevenueDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
+    <Compile Include="DAL\UserRoleDAL.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,13 +147,16 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="DbConnect.cs" />
+    <Compile Include="DTO\CategoryDTO.cs" />
     <Compile Include="DTO\CustomerDTO.cs" />
     <Compile Include="DTO\InvoiceDTO.cs" />
     <Compile Include="DTO\LoginDTO.cs" />
     <Compile Include="DTO\MiddleTemporaryDataDTO.cs" />
     <Compile Include="DTO\ProductDTO.cs" />
+    <Compile Include="DTO\RevenueDTO.cs" />
     <Compile Include="DTO\TemporaryDataDTO.cs" />
     <Compile Include="DTO\UserDTO.cs" />
+    <Compile Include="DTO\UserRoleDTO.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +195,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RevenueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RevenueForm.Designer.cs">
+      <DependentUpon>RevenueForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
@@ -243,6 +260,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RevenueForm.resx">
+      <DependentUpon>RevenueForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>

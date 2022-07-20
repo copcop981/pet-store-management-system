@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -147,7 +145,14 @@ namespace PetStoreManagement
                         mf.lblRole.Text = _role;
 
                         if (_role == "Administrator")
-                            mf.btnUser.Enabled = true;
+                            //mf.btnUser.Enabled = true;
+                            mf.btnUser.Visible = true;
+
+                        if (_role == "Cashier")
+                        {
+                            mf.btnRevenue.Visible = true;
+                            mf.pnDecal.Visible = false;
+                        }
 
                         errProvider.Clear();
                         Hide();
@@ -165,7 +170,7 @@ namespace PetStoreManagement
                     MessageBox.Show(ex.Message, title);
                 }
             }
-            
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -197,7 +202,7 @@ namespace PetStoreManagement
 
         private void chkbShowHide_CheckedChanged(object sender, EventArgs e)
         {
-            txbPassword.Focus();
+            //txbPassword.Focus();
             if (chkbShowHide.Checked)
                 //txbPassword.UseSystemPasswordChar = true;
                 txbPassword.PasswordChar = '\0';
@@ -231,7 +236,7 @@ namespace PetStoreManagement
 
         bool validateInputData()
         {
-            if(txbUsername.Text.Trim() == "" || txbPassword.Text.Trim() == "")
+            if (txbUsername.Text.Trim() == "" || txbPassword.Text.Trim() == "")
             {
                 if (txbUsername.Text.Trim() == "")
                 {

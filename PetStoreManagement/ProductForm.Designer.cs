@@ -35,10 +35,6 @@ namespace PetStoreManagement
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.gridProduct = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.txbSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.picBoxNoItemsFound = new System.Windows.Forms.PictureBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +44,11 @@ namespace PetStoreManagement
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.txbSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.picBoxNoItemsFound = new System.Windows.Forms.PictureBox();
+            this.cbbCategoryList = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridProduct)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNoItemsFound)).BeginInit();
@@ -138,75 +139,6 @@ namespace PetStoreManagement
             this.gridProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gridProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridProduct_CellContentClick);
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Controls.Add(this.txbSearch);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 10);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(814, 39);
-            this.panel2.TabIndex = 4;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd.FillColor = System.Drawing.Color.Empty;
-            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.btnAdd.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnAdd.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(3, 2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.PressedColor = System.Drawing.Color.Transparent;
-            this.btnAdd.Size = new System.Drawing.Size(103, 34);
-            this.btnAdd.TabIndex = 19;
-            this.btnAdd.Text = "Product";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // txbSearch
-            // 
-            this.txbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbSearch.BackColor = System.Drawing.Color.Transparent;
-            this.txbSearch.BorderRadius = 20;
-            this.txbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbSearch.DefaultText = "";
-            this.txbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbSearch.IconLeft")));
-            this.txbSearch.Location = new System.Drawing.Point(448, 1);
-            this.txbSearch.Name = "txbSearch";
-            this.txbSearch.PasswordChar = '\0';
-            this.txbSearch.PlaceholderText = "Search here ...";
-            this.txbSearch.SelectedText = "";
-            this.txbSearch.Size = new System.Drawing.Size(363, 37);
-            this.txbSearch.TabIndex = 1;
-            this.txbSearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
-            // 
-            // picBoxNoItemsFound
-            // 
-            this.picBoxNoItemsFound.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBoxNoItemsFound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoItemsFound.Image")));
-            this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 49);
-            this.picBoxNoItemsFound.Name = "picBoxNoItemsFound";
-            this.picBoxNoItemsFound.Size = new System.Drawing.Size(814, 218);
-            this.picBoxNoItemsFound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxNoItemsFound.TabIndex = 9;
-            this.picBoxNoItemsFound.TabStop = false;
-            this.picBoxNoItemsFound.Visible = false;
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -283,6 +215,95 @@ namespace PetStoreManagement
             this.Delete.ReadOnly = true;
             this.Delete.Width = 30;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.cbbCategoryList);
+            this.panel2.Controls.Add(this.btnAdd);
+            this.panel2.Controls.Add(this.txbSearch);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 10);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(814, 39);
+            this.panel2.TabIndex = 4;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd.FillColor = System.Drawing.Color.Empty;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.btnAdd.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnAdd.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.Location = new System.Drawing.Point(3, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.PressedColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Size = new System.Drawing.Size(103, 34);
+            this.btnAdd.TabIndex = 19;
+            this.btnAdd.Text = "Product";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txbSearch
+            // 
+            this.txbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txbSearch.BorderRadius = 20;
+            this.txbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txbSearch.DefaultText = "";
+            this.txbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txbSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbSearch.IconLeft")));
+            this.txbSearch.Location = new System.Drawing.Point(448, 1);
+            this.txbSearch.Name = "txbSearch";
+            this.txbSearch.PasswordChar = '\0';
+            this.txbSearch.PlaceholderText = "Search here ...";
+            this.txbSearch.SelectedText = "";
+            this.txbSearch.Size = new System.Drawing.Size(363, 37);
+            this.txbSearch.TabIndex = 1;
+            this.txbSearch.TextChanged += new System.EventHandler(this.txbSearch_TextChanged);
+            // 
+            // picBoxNoItemsFound
+            // 
+            this.picBoxNoItemsFound.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picBoxNoItemsFound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoItemsFound.Image")));
+            this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 49);
+            this.picBoxNoItemsFound.Name = "picBoxNoItemsFound";
+            this.picBoxNoItemsFound.Size = new System.Drawing.Size(814, 218);
+            this.picBoxNoItemsFound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxNoItemsFound.TabIndex = 9;
+            this.picBoxNoItemsFound.TabStop = false;
+            this.picBoxNoItemsFound.Visible = false;
+            // 
+            // cbbCategoryList
+            // 
+            this.cbbCategoryList.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCategoryList.BorderColor = System.Drawing.Color.White;
+            this.cbbCategoryList.BorderRadius = 20;
+            this.cbbCategoryList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCategoryList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCategoryList.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCategoryList.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCategoryList.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCategoryList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbCategoryList.ItemHeight = 30;
+            this.cbbCategoryList.Location = new System.Drawing.Point(128, 1);
+            this.cbbCategoryList.Name = "cbbCategoryList";
+            this.cbbCategoryList.Size = new System.Drawing.Size(259, 36);
+            this.cbbCategoryList.TabIndex = 21;
+            this.cbbCategoryList.SelectedIndexChanged += new System.EventHandler(this.cbbCategoryList_SelectedIndexChanged);
+            // 
             // ProductForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -319,5 +340,6 @@ namespace PetStoreManagement
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbCategoryList;
     }
 }

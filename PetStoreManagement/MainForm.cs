@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using PetStoreManagement.BLL;
 
 namespace PetStoreManagement
 {
     public partial class MainForm : Form
     {
-        SqlConnection cn = new SqlConnection();
-        SqlCommand cm = new SqlCommand();
-        SqlDataReader rd;
-        DbConnect dbcon = new DbConnect();
+        MainBLL mainBLL = new MainBLL();
         public string uName;
         string title = "Pet Store Management System";
 
@@ -32,7 +30,6 @@ namespace PetStoreManagement
             pnNav.Top = btnDashboard.Top;
             pnNav.Left = btnDashboard.Left;
 
-            cn = new SqlConnection(dbcon.connection());
             btnDashboard.PerformClick();
             loadDailySale();
 
@@ -106,6 +103,15 @@ namespace PetStoreManagement
             pnNav.Left = btnCash.Left;
         }
 
+        private void btnRevenue_Click(object sender, EventArgs e)
+        {
+            openChildForm(new RevenueForm());
+
+            pnNav.Height = btnRevenue.Height;
+            pnNav.Top = btnRevenue.Top;
+            pnNav.Left = btnRevenue.Left;
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             pnNav.Height = btnLogout.Height;
@@ -129,13 +135,13 @@ namespace PetStoreManagement
         private void btnMaximize_Click(object sender, EventArgs e)
         {
             //WindowState = WindowState == FormWindowState.Normal ? FormWindowState.Maximized : FormWindowState.Normal;
-            if(WindowState == FormWindowState.Normal)
+            if (WindowState == FormWindowState.Normal)
             {
                 WindowState = FormWindowState.Maximized;
                 btnMaximize.Image = Image.FromFile($@"{Application.StartupPath}\Resources\imgs\IconRestoreBrowser_new.png");
                 btnMaximize.HoverState.Image = Image.FromFile($@"{Application.StartupPath}\Resources\imgs\IconRestoreBrowserFill_new.png");
             }
-            else if(WindowState == FormWindowState.Maximized)
+            else if (WindowState == FormWindowState.Maximized)
             {
                 WindowState = FormWindowState.Normal;
                 btnMaximize.Image = new Bitmap($@"{Application.StartupPath}\Resources\imgs\IconMaximize_new.png");
@@ -189,14 +195,16 @@ namespace PetStoreManagement
         public void loadDailySale()
         {
             string sDate = DateTime.Now.ToString("yyyyMMdd");
-            
+
             try
             {
-                cn.Open();
-                cm = new SqlCommand("select isnull(sum(Total), 0) from dbo.Cash where TransactionNo LIKE '%" + sDate + "%'", cn);
-                lblDailySale.Text = cm.ExecuteScalar() + "";
+                //cn.Open();
+                //cm = new SqlCommand("select isnull(sum(Total), 0) from dbo.Cash where TransactionNo LIKE '%" + sDate + "%'", cn);
+                //lblDailySale.Text = cm.ExecuteScalar() + "";
+                //lblDailySale.Text = string.Format("{0:#,##0.00}đ", double.Parse(lblDailySale.Text));
+                //cn.Close();
+                lblDailySale.Text = mainBLL.getDailySale(sDate).ToString();
                 lblDailySale.Text = string.Format("{0:#,##0.00}đ", double.Parse(lblDailySale.Text));
-                cn.Close();
             }
             catch (Exception ex)
             {

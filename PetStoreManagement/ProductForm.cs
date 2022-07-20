@@ -21,6 +21,7 @@ namespace PetStoreManagement
         //DbConnect dbcon = new DbConnect();
 
         ProductBLL productBLL = new ProductBLL();
+        CategoryBLL categoryBLL = new CategoryBLL();
         string title = "Pet Store Management System";
 
         public ProductForm()
@@ -29,6 +30,58 @@ namespace PetStoreManagement
 
             //cn = new SqlConnection(dbcon.connection());
             loadProductList();
+            loadCategoryList();
+            Load += ProductForm_Load;
+        }
+
+        private void ProductForm_Load(object sender, EventArgs e)
+        {
+            cbbCategoryList.SelectedIndex = 0;
+        }
+
+        private void txbSearch_TextChanged(object sender, EventArgs e)
+        {
+            loadProductList();
+        }
+
+        private void cbbCategoryList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbbCategoryList.SelectedIndex == -1) return;
+
+                if (cbbCategoryList.Text == "All")
+                {
+                    loadProductList();
+                    return;
+                }
+
+                string cate = cbbCategoryList.Text;
+                List<ProductDTO> productList = categoryBLL.getProductByCategory(cate);
+
+                int i = 0;
+                gridProduct.Rows.Clear();
+                foreach (ProductDTO product in productList)
+                {
+                    i++;
+                    int pId = product.Pid;
+                    string pName = product.Pname;
+                    string pType = product.Ptype;
+                    string pCategory = product.Pcategory;
+                    int pQuantity = product.Pquantity;
+                    int pPrice = product.Pprice;
+
+                    gridProduct.Rows.Add(i, pId, pName, pType, pCategory, pQuantity, pPrice);
+                }
+                if (gridProduct.Rows.Count == 0)
+                    picBoxNoItemsFound.Visible = true;
+                else
+                    picBoxNoItemsFound.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -37,11 +90,6 @@ namespace PetStoreManagement
             moduleForm.btnUpdate.Enabled = false;
             moduleForm.btnUpdate.BackColor = Color.Gray;
             moduleForm.ShowDialog();
-        }
-
-        private void txbSearch_TextChanged(object sender, EventArgs e)
-        {
-            loadProductList();
         }
 
         private void gridProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -76,7 +124,7 @@ namespace PetStoreManagement
                         //cm.ExecuteNonQuery();
                         //cn.Close();
                         int result = productBLL.deleteProduct((int)gridProduct.Rows[e.RowIndex].Cells[1].Value);
-                        if(result > 0)
+                        if (result > 0)
                             MessageBox.Show("Product has been Successfully Deleted!", title);
                     }
                 }
@@ -89,6 +137,21 @@ namespace PetStoreManagement
         }
 
         #region Method
+        public void loadCategoryList()
+        {
+            try
+            {
+                List<CategoryDTO> cateList = categoryBLL.getAllCategory();
+                cbbCategoryList.Items.Clear();
+                foreach (CategoryDTO cate in cateList)
+                    cbbCategoryList.Items.Add(cate.Name);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public void loadProductList()
         {
             //cm = new SqlCommand($"select * from dbo.Product where concat(Pname, Ptype, Pcategory) like '%{txbSearch.Text}%'", cn);
@@ -109,12 +172,13 @@ namespace PetStoreManagement
             //rd.Close();
             //cn.Close();
 
+            cbbCategoryList.Text = "All";
             List<ProductDTO> productList = productBLL.getAllProduct(txbSearch.Text);
 
             int i = 0;
             gridProduct.Rows.Clear();
 
-            foreach(ProductDTO product in productList)
+            foreach (ProductDTO product in productList)
             {
                 i++;
                 int pId = product.Pid;
