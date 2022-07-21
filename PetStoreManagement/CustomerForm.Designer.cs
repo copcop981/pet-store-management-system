@@ -215,7 +215,7 @@ namespace PetStoreManagement
             this.gridCustomer.RowHeadersVisible = false;
             this.gridCustomer.RowTemplate.Height = 30;
             this.gridCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridCustomer.Size = new System.Drawing.Size(814, 218);
+            this.gridCustomer.Size = new System.Drawing.Size(814, 256);
             this.gridCustomer.TabIndex = 6;
             this.gridCustomer.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridCustomer.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -307,7 +307,7 @@ namespace PetStoreManagement
             this.picBoxNoItemsFound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoItemsFound.Image")));
             this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 49);
             this.picBoxNoItemsFound.Name = "picBoxNoItemsFound";
-            this.picBoxNoItemsFound.Size = new System.Drawing.Size(814, 218);
+            this.picBoxNoItemsFound.Size = new System.Drawing.Size(814, 256);
             this.picBoxNoItemsFound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxNoItemsFound.TabIndex = 7;
             this.picBoxNoItemsFound.TabStop = false;
@@ -316,7 +316,7 @@ namespace PetStoreManagement
             // CustomerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(814, 267);
+            this.ClientSize = new System.Drawing.Size(814, 305);
             this.Controls.Add(this.picBoxNoItemsFound);
             this.Controls.Add(this.gridCustomer);
             this.Controls.Add(this.panel2);

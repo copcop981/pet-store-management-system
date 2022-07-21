@@ -29,9 +29,11 @@ namespace PetStoreManagement
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClean = new Guna.UI2.WinForms.Guna2Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2Button();
@@ -41,8 +43,8 @@ namespace PetStoreManagement
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnRevenue = new Guna.UI2.WinForms.Guna2Button();
             this.pnNav = new System.Windows.Forms.Panel();
+            this.btnRevenue = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnCash = new Guna.UI2.WinForms.Guna2Button();
             this.btnProduct = new Guna.UI2.WinForms.Guna2Button();
@@ -53,6 +55,7 @@ namespace PetStoreManagement
             this.lblRole = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pgTimerr = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.pnChildForm = new System.Windows.Forms.Panel();
             this.pnSeparate = new System.Windows.Forms.Panel();
             this.pnDash = new System.Windows.Forms.Panel();
@@ -63,9 +66,8 @@ namespace PetStoreManagement
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pgTimer = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.pnDecal = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.pgTimer = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -73,6 +75,7 @@ namespace PetStoreManagement
             this.lblDailySale = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel2.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,7 +86,6 @@ namespace PetStoreManagement
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel7.SuspendLayout();
-            this.panel12.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -99,6 +101,7 @@ namespace PetStoreManagement
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnClean);
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
@@ -109,6 +112,28 @@ namespace PetStoreManagement
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(982, 55);
             this.panel2.TabIndex = 1;
+            // 
+            // btnClean
+            // 
+            this.btnClean.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClean.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClean.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClean.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClean.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClean.FillColor = System.Drawing.Color.Transparent;
+            this.btnClean.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClean.ForeColor = System.Drawing.Color.White;
+            this.btnClean.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnClean.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnClean.Image = ((System.Drawing.Image)(resources.GetObject("btnClean.Image")));
+            this.btnClean.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnClean.Location = new System.Drawing.Point(825, 7);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.PressedColor = System.Drawing.Color.Transparent;
+            this.btnClean.PressedDepth = 0;
+            this.btnClean.Size = new System.Drawing.Size(40, 40);
+            this.btnClean.TabIndex = 19;
+            this.btnClean.Visible = false;
             // 
             // panel11
             // 
@@ -133,7 +158,7 @@ namespace PetStoreManagement
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnClose.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnClose.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.Location = new System.Drawing.Point(65, 3);
             this.btnClose.Name = "btnClose";
@@ -154,7 +179,7 @@ namespace PetStoreManagement
             this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
             this.btnMinimize.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnMinimize.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
             this.btnMinimize.Location = new System.Drawing.Point(3, 3);
             this.btnMinimize.Name = "btnMinimize";
@@ -172,7 +197,7 @@ namespace PetStoreManagement
             this.btnMaximize.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnMaximize.ForeColor = System.Drawing.Color.White;
             this.btnMaximize.HoverState.FillColor = System.Drawing.Color.Transparent;
-            this.btnMaximize.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.btnMaximize.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btnMaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximize.Image")));
             this.btnMaximize.Location = new System.Drawing.Point(34, 3);
             this.btnMaximize.Name = "btnMaximize";
@@ -186,9 +211,9 @@ namespace PetStoreManagement
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(59, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 20);
+            this.label2.Size = new System.Drawing.Size(127, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Developed By";
+            this.label2.Text = "Welcome to the";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -197,9 +222,9 @@ namespace PetStoreManagement
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(59, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 18);
+            this.label1.Size = new System.Drawing.Size(71, 18);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Phúc Lê";
+            this.label1.Text = "Pet Store";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
@@ -235,12 +260,21 @@ namespace PetStoreManagement
             this.panel3.Controls.Add(this.btnCustomers);
             this.panel3.Controls.Add(this.btnDashboard);
             this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.pgTimerr);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 55);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.panel3.Size = new System.Drawing.Size(168, 561);
             this.panel3.TabIndex = 2;
+            // 
+            // pnNav
+            // 
+            this.pnNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.pnNav.Location = new System.Drawing.Point(0, 427);
+            this.pnNav.Name = "pnNav";
+            this.pnNav.Size = new System.Drawing.Size(5, 89);
+            this.pnNav.TabIndex = 7;
             // 
             // btnRevenue
             // 
@@ -256,7 +290,7 @@ namespace PetStoreManagement
             this.btnRevenue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnRevenue.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnRevenue.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnRevenue.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnRevenue.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btnRevenue.Image = ((System.Drawing.Image)(resources.GetObject("btnRevenue.Image")));
             this.btnRevenue.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRevenue.ImageOffset = new System.Drawing.Point(5, 0);
@@ -270,14 +304,6 @@ namespace PetStoreManagement
             this.btnRevenue.Visible = false;
             this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
             // 
-            // pnNav
-            // 
-            this.pnNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.pnNav.Location = new System.Drawing.Point(0, 427);
-            this.pnNav.Name = "pnNav";
-            this.pnNav.Size = new System.Drawing.Size(5, 89);
-            this.pnNav.TabIndex = 7;
-            // 
             // btnLogout
             // 
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -287,12 +313,12 @@ namespace PetStoreManagement
             this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLogout.FillColor = System.Drawing.Color.Transparent;
-            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 11.25F);
             this.btnLogout.ForeColor = System.Drawing.Color.DarkGray;
             this.btnLogout.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnLogout.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnLogout.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            this.btnLogout.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageOffset = new System.Drawing.Point(5, 0);
@@ -319,7 +345,7 @@ namespace PetStoreManagement
             this.btnCash.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnCash.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnCash.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnCash.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            this.btnCash.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             this.btnCash.Image = ((System.Drawing.Image)(resources.GetObject("btnCash.Image")));
             this.btnCash.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCash.ImageOffset = new System.Drawing.Point(5, 0);
@@ -346,7 +372,7 @@ namespace PetStoreManagement
             this.btnProduct.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnProduct.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnProduct.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnProduct.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
+            this.btnProduct.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
             this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
             this.btnProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProduct.ImageOffset = new System.Drawing.Point(5, 0);
@@ -373,7 +399,7 @@ namespace PetStoreManagement
             this.btnUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnUser.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnUser.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnUser.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            this.btnUser.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
             this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
             this.btnUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUser.ImageOffset = new System.Drawing.Point(5, 0);
@@ -401,7 +427,7 @@ namespace PetStoreManagement
             this.btnCustomers.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnCustomers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnCustomers.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnCustomers.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
+            this.btnCustomers.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
             this.btnCustomers.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomers.Image")));
             this.btnCustomers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCustomers.ImageOffset = new System.Drawing.Point(5, 0);
@@ -428,7 +454,7 @@ namespace PetStoreManagement
             this.btnDashboard.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnDashboard.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnDashboard.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
+            this.btnDashboard.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image10")));
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.ImageOffset = new System.Drawing.Point(5, 0);
@@ -483,6 +509,35 @@ namespace PetStoreManagement
             this.guna2CirclePictureBox1.TabIndex = 0;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // pgTimerr
+            // 
+            this.pgTimerr.BackColor = System.Drawing.Color.Transparent;
+            this.pgTimerr.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(53)))));
+            this.pgTimerr.FillOffset = 10;
+            this.pgTimerr.FillThickness = 10;
+            this.pgTimerr.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.pgTimerr.ForeColor = System.Drawing.Color.White;
+            this.pgTimerr.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(53)))));
+            this.pgTimerr.Location = new System.Drawing.Point(33, 396);
+            this.pgTimerr.Maximum = 60;
+            this.pgTimerr.Minimum = 0;
+            this.pgTimerr.Name = "pgTimerr";
+            this.pgTimerr.ProgressColor = System.Drawing.Color.Aqua;
+            this.pgTimerr.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(1)))));
+            this.pgTimerr.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
+            this.pgTimerr.ProgressOffset = 10;
+            this.pgTimerr.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
+            this.pgTimerr.ProgressThickness = 10;
+            this.pgTimerr.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pgTimerr.ShowText = true;
+            this.pgTimerr.Size = new System.Drawing.Size(102, 102);
+            this.pgTimerr.TabIndex = 2;
+            this.pgTimerr.Text = "00:00:00";
+            this.pgTimerr.TextMode = Guna.UI2.WinForms.Enums.ProgressBarTextMode.Custom;
+            this.pgTimerr.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.pgTimerr.Value = 6;
+            this.pgTimerr.Visible = false;
+            // 
             // pnChildForm
             // 
             this.pnChildForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -490,7 +545,7 @@ namespace PetStoreManagement
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnChildForm.Location = new System.Drawing.Point(168, 55);
             this.pnChildForm.Name = "pnChildForm";
-            this.pnChildForm.Size = new System.Drawing.Size(814, 267);
+            this.pnChildForm.Size = new System.Drawing.Size(814, 305);
             this.pnChildForm.TabIndex = 3;
             // 
             // pnSeparate
@@ -498,9 +553,9 @@ namespace PetStoreManagement
             this.pnSeparate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnSeparate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.pnSeparate.Location = new System.Drawing.Point(168, 322);
+            this.pnSeparate.Location = new System.Drawing.Point(168, 366);
             this.pnSeparate.Name = "pnSeparate";
-            this.pnSeparate.Size = new System.Drawing.Size(814, 6);
+            this.pnSeparate.Size = new System.Drawing.Size(814, 5);
             this.pnSeparate.TabIndex = 4;
             // 
             // pnDash
@@ -511,10 +566,10 @@ namespace PetStoreManagement
             this.pnDash.Controls.Add(this.panel10);
             this.pnDash.Controls.Add(this.panel8);
             this.pnDash.Controls.Add(this.panel7);
-            this.pnDash.Location = new System.Drawing.Point(168, 328);
+            this.pnDash.Location = new System.Drawing.Point(168, 377);
             this.pnDash.Name = "pnDash";
             this.pnDash.Padding = new System.Windows.Forms.Padding(10);
-            this.pnDash.Size = new System.Drawing.Size(814, 288);
+            this.pnDash.Size = new System.Drawing.Size(814, 239);
             this.pnDash.TabIndex = 5;
             // 
             // panel10
@@ -526,7 +581,7 @@ namespace PetStoreManagement
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(10, 10);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(520, 268);
+            this.panel10.Size = new System.Drawing.Size(520, 219);
             this.panel10.TabIndex = 2;
             // 
             // label9
@@ -568,7 +623,7 @@ namespace PetStoreManagement
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(520, 268);
+            this.pictureBox3.Size = new System.Drawing.Size(520, 219);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -579,67 +634,52 @@ namespace PetStoreManagement
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Location = new System.Drawing.Point(530, 10);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(6, 268);
+            this.panel8.Size = new System.Drawing.Size(6, 219);
             this.panel8.TabIndex = 1;
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.pgTimer);
             this.panel7.Controls.Add(this.pnDecal);
-            this.panel7.Controls.Add(this.panel12);
             this.panel7.Controls.Add(this.panel9);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel7.Location = new System.Drawing.Point(536, 10);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(268, 268);
+            this.panel7.Size = new System.Drawing.Size(268, 219);
             this.panel7.TabIndex = 0;
+            // 
+            // pgTimer
+            // 
+            this.pgTimer.BackColor = System.Drawing.Color.Transparent;
+            this.pgTimer.BorderColor = System.Drawing.Color.Transparent;
+            this.pgTimer.BorderThickness = 2;
+            this.pgTimer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(225)))), ((int)(((byte)(243)))));
+            this.pgTimer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pgTimer.ForeColor = System.Drawing.Color.Black;
+            this.pgTimer.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.pgTimer.Location = new System.Drawing.Point(6, 160);
+            this.pgTimer.Maximum = 60;
+            this.pgTimer.Name = "pgTimer";
+            this.pgTimer.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(124)))), ((int)(((byte)(165)))));
+            this.pgTimer.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(166)))), ((int)(((byte)(201)))));
+            this.pgTimer.ShowText = true;
+            this.pgTimer.Size = new System.Drawing.Size(256, 44);
+            this.pgTimer.TabIndex = 22;
+            this.pgTimer.Text = "00:00:00";
+            this.pgTimer.TextMode = Guna.UI2.WinForms.Enums.ProgressBarTextMode.Custom;
+            this.pgTimer.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.pgTimer.Value = 60;
             // 
             // pnDecal
             // 
             this.pnDecal.BackColor = System.Drawing.Color.Transparent;
             this.pnDecal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnDecal.BackgroundImage")));
             this.pnDecal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnDecal.Location = new System.Drawing.Point(6, 6);
+            this.pnDecal.Location = new System.Drawing.Point(6, 7);
             this.pnDecal.Name = "pnDecal";
             this.pnDecal.Size = new System.Drawing.Size(256, 140);
             this.pnDecal.TabIndex = 5;
-            // 
-            // panel12
-            // 
-            this.panel12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel12.Controls.Add(this.pgTimer);
-            this.panel12.Location = new System.Drawing.Point(6, 151);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(256, 117);
-            this.panel12.TabIndex = 22;
-            // 
-            // pgTimer
-            // 
-            this.pgTimer.BackColor = System.Drawing.Color.Transparent;
-            this.pgTimer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(53)))));
-            this.pgTimer.FillOffset = 10;
-            this.pgTimer.FillThickness = 10;
-            this.pgTimer.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.pgTimer.ForeColor = System.Drawing.Color.White;
-            this.pgTimer.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(53)))));
-            this.pgTimer.Location = new System.Drawing.Point(74, 1);
-            this.pgTimer.Maximum = 60;
-            this.pgTimer.Minimum = 0;
-            this.pgTimer.Name = "pgTimer";
-            this.pgTimer.ProgressColor = System.Drawing.Color.Aqua;
-            this.pgTimer.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(219)))), ((int)(((byte)(1)))));
-            this.pgTimer.ProgressEndCap = System.Drawing.Drawing2D.LineCap.Round;
-            this.pgTimer.ProgressOffset = 10;
-            this.pgTimer.ProgressStartCap = System.Drawing.Drawing2D.LineCap.Round;
-            this.pgTimer.ProgressThickness = 10;
-            this.pgTimer.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pgTimer.ShowText = true;
-            this.pgTimer.Size = new System.Drawing.Size(114, 114);
-            this.pgTimer.TabIndex = 2;
-            this.pgTimer.Text = "00:00:00";
-            this.pgTimer.TextMode = Guna.UI2.WinForms.Enums.ProgressBarTextMode.Custom;
-            this.pgTimer.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.pgTimer.Value = 6;
             // 
             // panel9
             // 
@@ -649,7 +689,7 @@ namespace PetStoreManagement
             this.panel9.Controls.Add(this.label6);
             this.panel9.Controls.Add(this.lblDailySale);
             this.panel9.Controls.Add(this.label4);
-            this.panel9.Location = new System.Drawing.Point(6, 27);
+            this.panel9.Location = new System.Drawing.Point(6, 28);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(256, 118);
             this.panel9.TabIndex = 21;
@@ -711,7 +751,7 @@ namespace PetStoreManagement
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 6);
+            this.label3.Location = new System.Drawing.Point(6, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 18);
             this.label3.TabIndex = 20;
@@ -748,7 +788,6 @@ namespace PetStoreManagement
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel12.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -787,7 +826,7 @@ namespace PetStoreManagement
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Guna.UI2.WinForms.Guna2CircleProgressBar pgTimer;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar pgTimerr;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label5;
@@ -797,9 +836,11 @@ namespace PetStoreManagement
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2Button btnMinimize;
         private Guna.UI2.WinForms.Guna2Button btnMaximize;
-        private System.Windows.Forms.Panel panel12;
         internal Guna.UI2.WinForms.Guna2Button btnRevenue;
         internal Guna.UI2.WinForms.Guna2Button btnUser;
         internal System.Windows.Forms.Panel pnDecal;
+        private Guna.UI2.WinForms.Guna2ProgressBar pgTimer;
+        private System.Windows.Forms.ToolTip toolTip1;
+        internal Guna.UI2.WinForms.Guna2Button btnClean;
     }
 }

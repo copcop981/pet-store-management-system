@@ -20,6 +20,7 @@ namespace PetStoreManagement
         //SqlDataReader rd;
         //DbConnect dbcon = new DbConnect();
 
+        CategoryBLL categoryBLL = new CategoryBLL();
         CashProductBLL cashProductBLL = new CashProductBLL();
         public string uName;
         string title = "Pet Store Management System";
@@ -34,9 +35,10 @@ namespace PetStoreManagement
             InitializeComponent();
 
             //cn = new SqlConnection(dbcon.connection());
-            loadProductList();
             cashForm = cash;
             AcceptButton = btnSubmit;
+            loadCategoryList();
+            loadProductList();
 
             Panel[] panelList = { panel1, panel2 };
             for(int i = 0; i < panelList.Length; i++)
@@ -45,12 +47,13 @@ namespace PetStoreManagement
                 panelList[i].MouseMove += CashProduct_MouseMove;
                 panelList[i].MouseDown += CashProduct_MouseDown;
             }
-
             Load += CashProduct_Load;
         }
 
         private void CashProduct_Load(object sender, EventArgs e)
         {
+            cbbCategoryList.SelectedIndex = 0;
+
             //foreach (DataGridViewRow row1 in cashForm.gridCash.Rows)
             //foreach (DataGridViewRow row2 in gridProduct.Rows)
 
@@ -90,6 +93,46 @@ namespace PetStoreManagement
         private void CashProduct_MouseUp(object sender, MouseEventArgs e)
         {
             drag = false;
+        }
+
+        private void cbbCategoryList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbbCategoryList.SelectedIndex == -1) return;
+
+                if (cbbCategoryList.Text == "All")
+                {
+                    loadProductList();
+                    return;
+                }
+
+                string cate = cbbCategoryList.Text;
+                List<ProductDTO> productList = categoryBLL.getProductByCategory(cate);
+
+                int i = 0;
+                gridProduct.Rows.Clear();
+                foreach (ProductDTO product in productList)
+                {
+                    i++;
+                    int pId = product.Pid;
+                    string pName = product.Pname;
+                    string pType = product.Ptype;
+                    string pCategory = product.Pcategory;
+                    int pQuantity = product.Pquantity;
+                    int pPrice = product.Pprice;
+
+                    gridProduct.Rows.Add(i, pId, pName, pType, pCategory, pQuantity, pPrice);
+                }
+                if (gridProduct.Rows.Count == 0)
+                    picBoxNoItemsFound.Visible = true;
+                else
+                    picBoxNoItemsFound.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void txbSearch_TextChanged(object sender, EventArgs e)
@@ -158,6 +201,21 @@ namespace PetStoreManagement
         }
 
         #region Method
+        public void loadCategoryList()
+        {
+            try
+            {
+                List<CategoryDTO> cateList = categoryBLL.getAllCategory();
+                cbbCategoryList.Items.Clear();
+                foreach (CategoryDTO cate in cateList)
+                    cbbCategoryList.Items.Add(cate.Name);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         public void loadProductList()
         {
             //cm = new SqlCommand($"select * from dbo.Product where concat(Pname, Ptype, Pcategory) like '%{txbSearch.Text}%' and Pquantity > 0", cn);
@@ -177,6 +235,7 @@ namespace PetStoreManagement
             //}
             //rd.Close();
             //cn.Close();
+            cbbCategoryList.Text = "All";
 
             int i = 0;
             gridProduct.Rows.Clear();

@@ -45,10 +45,10 @@ namespace PetStoreManagement
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbbCategoryList = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.txbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.picBoxNoItemsFound = new System.Windows.Forms.PictureBox();
-            this.cbbCategoryList = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridProduct)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNoItemsFound)).BeginInit();
@@ -114,7 +114,7 @@ namespace PetStoreManagement
             this.gridProduct.RowHeadersVisible = false;
             this.gridProduct.RowTemplate.Height = 30;
             this.gridProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridProduct.Size = new System.Drawing.Size(814, 218);
+            this.gridProduct.Size = new System.Drawing.Size(814, 256);
             this.gridProduct.TabIndex = 5;
             this.gridProduct.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridProduct.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -226,6 +226,24 @@ namespace PetStoreManagement
             this.panel2.Size = new System.Drawing.Size(814, 39);
             this.panel2.TabIndex = 4;
             // 
+            // cbbCategoryList
+            // 
+            this.cbbCategoryList.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCategoryList.BorderColor = System.Drawing.Color.White;
+            this.cbbCategoryList.BorderRadius = 20;
+            this.cbbCategoryList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCategoryList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCategoryList.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCategoryList.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCategoryList.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCategoryList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbCategoryList.ItemHeight = 30;
+            this.cbbCategoryList.Location = new System.Drawing.Point(128, 1);
+            this.cbbCategoryList.Name = "cbbCategoryList";
+            this.cbbCategoryList.Size = new System.Drawing.Size(259, 36);
+            this.cbbCategoryList.TabIndex = 21;
+            this.cbbCategoryList.SelectedIndexChanged += new System.EventHandler(this.cbbCategoryList_SelectedIndexChanged);
+            // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Transparent;
@@ -280,34 +298,16 @@ namespace PetStoreManagement
             this.picBoxNoItemsFound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoItemsFound.Image")));
             this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 49);
             this.picBoxNoItemsFound.Name = "picBoxNoItemsFound";
-            this.picBoxNoItemsFound.Size = new System.Drawing.Size(814, 218);
+            this.picBoxNoItemsFound.Size = new System.Drawing.Size(814, 256);
             this.picBoxNoItemsFound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxNoItemsFound.TabIndex = 9;
             this.picBoxNoItemsFound.TabStop = false;
             this.picBoxNoItemsFound.Visible = false;
             // 
-            // cbbCategoryList
-            // 
-            this.cbbCategoryList.BackColor = System.Drawing.Color.Transparent;
-            this.cbbCategoryList.BorderColor = System.Drawing.Color.White;
-            this.cbbCategoryList.BorderRadius = 20;
-            this.cbbCategoryList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbCategoryList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbCategoryList.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbCategoryList.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbCategoryList.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCategoryList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbCategoryList.ItemHeight = 30;
-            this.cbbCategoryList.Location = new System.Drawing.Point(128, 1);
-            this.cbbCategoryList.Name = "cbbCategoryList";
-            this.cbbCategoryList.Size = new System.Drawing.Size(259, 36);
-            this.cbbCategoryList.TabIndex = 21;
-            this.cbbCategoryList.SelectedIndexChanged += new System.EventHandler(this.cbbCategoryList_SelectedIndexChanged);
-            // 
             // ProductForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(814, 267);
+            this.ClientSize = new System.Drawing.Size(814, 305);
             this.Controls.Add(this.picBoxNoItemsFound);
             this.Controls.Add(this.gridProduct);
             this.Controls.Add(this.panel2);

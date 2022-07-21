@@ -22,5 +22,15 @@ namespace PetStoreManagement.DAL
             conn.Close();
             return result;
         }
+
+        internal int cleanJunkData()
+        {
+            conn = new SqlConnection(dbConn.connection());
+            conn.Open();
+            SqlCommand command = new SqlCommand("delete dbo.TemporaryData", conn);
+            int result = command.ExecuteNonQuery();
+            conn.Close();
+            return result;
+        }
     }
 }

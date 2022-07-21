@@ -318,19 +318,21 @@ namespace PetStoreManagement
 
             if(cbbRole.Text == "Employee")
             {
-                Height = 426 - cbbRole.Height - 15;
+                Height = 455 - cbbRole.Height - 45;
                 lblPassword.Visible = false;
                 txbPassword.Visible = false;
                 pnTxbPassword.Visible = false;
                 pbPassword.Visible = false;
+                chkbShowHide.Visible = false;
             }
             else
             {
-                Height = 426;
+                Height = 455;
                 txbPassword.Visible = true;
                 lblPassword.Visible = true;
                 pnTxbPassword.Visible = true;
                 pbPassword.Visible = true;
+                chkbShowHide.Visible = true;
             }
         }
 
@@ -344,6 +346,17 @@ namespace PetStoreManagement
         {
             if (txbPassword.Text.Trim() != "")
                 errProvider.SetError(txbPassword, "");
+        }
+
+        private void chkbShowHide_CheckedChanged(object sender, EventArgs e)
+        {
+            //txbPassword.Focus();
+            if (chkbShowHide.Checked)
+                //txbPassword.UseSystemPasswordChar = true;
+                txbPassword.PasswordChar = '\0';
+            else
+                //txbPassword.UseSystemPasswordChar = false;
+                txbPassword.PasswordChar = '♦';
         }
 
         #region Method

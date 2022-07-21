@@ -29,18 +29,22 @@ namespace PetStoreManagement
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RevenueForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.picBoxNoItemsFound = new System.Windows.Forms.PictureBox();
-            this.cbbDay = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbbMonth = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cbbYear = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.gridRevenue = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dtpkEndDay = new System.Windows.Forms.DateTimePicker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpkStartDay = new System.Windows.Forms.DateTimePicker();
+            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFilter = new Guna.UI2.WinForms.Guna2Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +58,8 @@ namespace PetStoreManagement
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNoItemsFound)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridRevenue)).BeginInit();
             this.panel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // picBoxNoItemsFound
@@ -62,87 +68,13 @@ namespace PetStoreManagement
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picBoxNoItemsFound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoItemsFound.Image")));
-            this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 49);
+            this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 73);
             this.picBoxNoItemsFound.Name = "picBoxNoItemsFound";
-            this.picBoxNoItemsFound.Size = new System.Drawing.Size(814, 218);
+            this.picBoxNoItemsFound.Size = new System.Drawing.Size(814, 232);
             this.picBoxNoItemsFound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxNoItemsFound.TabIndex = 15;
             this.picBoxNoItemsFound.TabStop = false;
             this.picBoxNoItemsFound.Visible = false;
-            // 
-            // cbbDay
-            // 
-            this.cbbDay.BackColor = System.Drawing.Color.Transparent;
-            this.cbbDay.BorderColor = System.Drawing.Color.White;
-            this.cbbDay.BorderRadius = 20;
-            this.cbbDay.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbDay.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbDay.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbDay.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbDay.ItemHeight = 30;
-            this.cbbDay.Location = new System.Drawing.Point(306, 1);
-            this.cbbDay.Name = "cbbDay";
-            this.cbbDay.Size = new System.Drawing.Size(141, 36);
-            this.cbbDay.TabIndex = 22;
-            // 
-            // cbbMonth
-            // 
-            this.cbbMonth.BackColor = System.Drawing.Color.Transparent;
-            this.cbbMonth.BorderColor = System.Drawing.Color.White;
-            this.cbbMonth.BorderRadius = 20;
-            this.cbbMonth.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbMonth.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbMonth.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbMonth.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbMonth.ItemHeight = 30;
-            this.cbbMonth.Location = new System.Drawing.Point(159, 2);
-            this.cbbMonth.Name = "cbbMonth";
-            this.cbbMonth.Size = new System.Drawing.Size(141, 36);
-            this.cbbMonth.TabIndex = 21;
-            // 
-            // cbbYear
-            // 
-            this.cbbYear.BackColor = System.Drawing.Color.Transparent;
-            this.cbbYear.BorderColor = System.Drawing.Color.White;
-            this.cbbYear.BorderRadius = 20;
-            this.cbbYear.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbYear.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbYear.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbYear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbYear.ItemHeight = 30;
-            this.cbbYear.Location = new System.Drawing.Point(12, 2);
-            this.cbbYear.Name = "cbbYear";
-            this.cbbYear.Size = new System.Drawing.Size(141, 36);
-            this.cbbYear.TabIndex = 20;
-            // 
-            // txbSearch
-            // 
-            this.txbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbSearch.BackColor = System.Drawing.Color.Transparent;
-            this.txbSearch.BorderRadius = 20;
-            this.txbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbSearch.DefaultText = "";
-            this.txbSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("txbSearch.IconLeft")));
-            this.txbSearch.Location = new System.Drawing.Point(484, 1);
-            this.txbSearch.Name = "txbSearch";
-            this.txbSearch.PasswordChar = '\0';
-            this.txbSearch.PlaceholderText = "Search here ...";
-            this.txbSearch.SelectedText = "";
-            this.txbSearch.Size = new System.Drawing.Size(327, 37);
-            this.txbSearch.TabIndex = 1;
             // 
             // gridRevenue
             // 
@@ -190,12 +122,12 @@ namespace PetStoreManagement
             this.gridRevenue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridRevenue.EnableHeadersVisualStyles = false;
             this.gridRevenue.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridRevenue.Location = new System.Drawing.Point(0, 49);
+            this.gridRevenue.Location = new System.Drawing.Point(0, 73);
             this.gridRevenue.Name = "gridRevenue";
             this.gridRevenue.RowHeadersVisible = false;
             this.gridRevenue.RowTemplate.Height = 30;
             this.gridRevenue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridRevenue.Size = new System.Drawing.Size(814, 218);
+            this.gridRevenue.Size = new System.Drawing.Size(814, 232);
             this.gridRevenue.TabIndex = 13;
             this.gridRevenue.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridRevenue.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -230,15 +162,95 @@ namespace PetStoreManagement
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.cbbDay);
-            this.panel2.Controls.Add(this.cbbMonth);
-            this.panel2.Controls.Add(this.cbbYear);
-            this.panel2.Controls.Add(this.txbSearch);
+            this.panel2.Controls.Add(this.groupBox2);
+            this.panel2.Controls.Add(this.groupBox1);
+            this.panel2.Controls.Add(this.btnRefresh);
+            this.panel2.Controls.Add(this.btnFilter);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 10);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(814, 39);
+            this.panel2.Size = new System.Drawing.Size(814, 63);
             this.panel2.TabIndex = 14;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dtpkEndDay);
+            this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(507, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(295, 51);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "To:";
+            // 
+            // dtpkEndDay
+            // 
+            this.dtpkEndDay.CustomFormat = "";
+            this.dtpkEndDay.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpkEndDay.Location = new System.Drawing.Point(6, 19);
+            this.dtpkEndDay.Name = "dtpkEndDay";
+            this.dtpkEndDay.Size = new System.Drawing.Size(283, 26);
+            this.dtpkEndDay.TabIndex = 3;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dtpkStartDay);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(295, 51);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "From:";
+            // 
+            // dtpkStartDay
+            // 
+            this.dtpkStartDay.CustomFormat = "";
+            this.dtpkStartDay.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpkStartDay.Location = new System.Drawing.Point(6, 19);
+            this.dtpkStartDay.Name = "dtpkStartDay";
+            this.dtpkStartDay.Size = new System.Drawing.Size(283, 26);
+            this.dtpkStartDay.TabIndex = 3;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefresh.FillColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnRefresh.Location = new System.Drawing.Point(415, 18);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(33, 33);
+            this.btnRefresh.TabIndex = 5;
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFilter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFilter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFilter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFilter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFilter.FillColor = System.Drawing.Color.Transparent;
+            this.btnFilter.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnFilter.ForeColor = System.Drawing.Color.White;
+            this.btnFilter.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.btnFilter.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnFilter.Image")));
+            this.btnFilter.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnFilter.Location = new System.Drawing.Point(360, 18);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.PressedColor = System.Drawing.Color.Transparent;
+            this.btnFilter.PressedDepth = 0;
+            this.btnFilter.Size = new System.Drawing.Size(33, 33);
+            this.btnFilter.TabIndex = 4;
             // 
             // Column1
             // 
@@ -290,6 +302,7 @@ namespace PetStoreManagement
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column6.HeaderText = "Quantity";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             this.Column6.Width = 87;
             // 
             // Column5
@@ -319,7 +332,7 @@ namespace PetStoreManagement
             // RevenueForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(814, 267);
+            this.ClientSize = new System.Drawing.Size(814, 305);
             this.Controls.Add(this.picBoxNoItemsFound);
             this.Controls.Add(this.gridRevenue);
             this.Controls.Add(this.panel2);
@@ -330,6 +343,8 @@ namespace PetStoreManagement
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNoItemsFound)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridRevenue)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -337,13 +352,16 @@ namespace PetStoreManagement
         #endregion
 
         private System.Windows.Forms.PictureBox picBoxNoItemsFound;
-        private Guna.UI2.WinForms.Guna2ComboBox cbbDay;
-        private Guna.UI2.WinForms.Guna2ComboBox cbbMonth;
-        private Guna.UI2.WinForms.Guna2ComboBox cbbYear;
-        private Guna.UI2.WinForms.Guna2TextBox txbSearch;
         public Guna.UI2.WinForms.Guna2DataGridView gridRevenue;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DateTimePicker dtpkStartDay;
+        private Guna.UI2.WinForms.Guna2Button btnRefresh;
+        private Guna.UI2.WinForms.Guna2Button btnFilter;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DateTimePicker dtpkEndDay;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

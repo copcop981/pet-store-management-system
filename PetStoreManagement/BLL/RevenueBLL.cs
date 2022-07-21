@@ -21,5 +21,15 @@ namespace PetStoreManagement.BLL
         {
             return revenueDAL.getAllRevenue();
         }
+
+        internal List<RevenueDTO> filterRevenueByDate(string startDay, string endDay)
+        {
+            return revenueDAL.filterRevenueByDate(startDay, endDay);
+        }
+
+        internal List<RevenueDTO> filterProductByDate(string year, string month, string day, string search)
+        {
+            return revenueDAL.filterProductByDate(year, month, day, search);
+        }
     }
 }

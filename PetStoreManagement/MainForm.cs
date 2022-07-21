@@ -36,6 +36,30 @@ namespace PetStoreManagement
             lblTitle.MouseUp += LblTitle_MouseUp;
             lblTitle.MouseMove += LblTitle_MouseMove;
             lblTitle.MouseDown += LblTitle_MouseDown;
+
+            btnClean.MouseHover += BtnClean_MouseHover;
+            btnClean.Click += BtnClean_Click;
+        }
+
+        private void BtnClean_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int result = mainBLL.cleanJunkData();
+                if (result > 0)
+                    MessageBox.Show("Junk Data has been Successfully Cleaned Up!", title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("There's No Junk Data!", title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void BtnClean_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(btnClean, "Clean up junk data");
         }
 
         private void LblTitle_MouseDown(object sender, MouseEventArgs e)
@@ -164,9 +188,9 @@ namespace PetStoreManagement
 
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
-            pgTimer.Invoke((MethodInvoker)delegate
+            pgTimer.Invoke((MethodInvoker) delegate
             {
-                pgTimer.Text = DateTime.Now.ToString("hh:mm:ss");
+                pgTimer.Text = DateTime.Now.ToString("H:mm:ss");
                 pgTimer.Value = Convert.ToInt32(DateTime.Now.Second);
             });
         }

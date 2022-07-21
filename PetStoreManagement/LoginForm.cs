@@ -145,8 +145,11 @@ namespace PetStoreManagement
                         mf.lblRole.Text = _role;
 
                         if (_role == "Administrator")
+                        {
                             //mf.btnUser.Enabled = true;
                             mf.btnUser.Visible = true;
+                            mf.btnClean.Visible = true;
+                        }
 
                         if (_role == "Cashier")
                         {
@@ -267,6 +270,18 @@ namespace PetStoreManagement
             //return data.Rows.Count > 0;
 
             return loginBLL.checkLogin(_username, _password);
+        }
+
+        void rememberLogin()
+        {
+            if (chkbRememberLogin.Checked)
+            {
+                Properties.Settings.Default.username = txbUsername.Text;
+                Properties.Settings.Default.password = txbPassword.Text;
+                Properties.Settings.Default.Save();
+            }
+            else
+                Properties.Settings.Default.Reset();
         }
         #endregion
     }

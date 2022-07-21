@@ -15,5 +15,10 @@ namespace PetStoreManagement.BLL
         {
             return mainDAL.getDailySale(sDate);
         }
+
+        internal int cleanJunkData()
+        {
+            return mainDAL.cleanJunkData();
+        }
     }
 }

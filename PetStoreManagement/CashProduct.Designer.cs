@@ -34,13 +34,13 @@ namespace PetStoreManagement
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbCategoryList = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.txbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.gridProduct = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.picBoxNoItemsFound = new System.Windows.Forms.PictureBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +49,7 @@ namespace PetStoreManagement
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.picBoxNoItemsFound = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -59,12 +60,32 @@ namespace PetStoreManagement
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            this.panel1.Controls.Add(this.cbbCategoryList);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(710, 51);
             this.panel1.TabIndex = 2;
+            // 
+            // cbbCategoryList
+            // 
+            this.cbbCategoryList.BackColor = System.Drawing.Color.Transparent;
+            this.cbbCategoryList.BorderColor = System.Drawing.Color.White;
+            this.cbbCategoryList.BorderRadius = 20;
+            this.cbbCategoryList.BorderThickness = 0;
+            this.cbbCategoryList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbCategoryList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbCategoryList.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCategoryList.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbCategoryList.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCategoryList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbCategoryList.ItemHeight = 30;
+            this.cbbCategoryList.Location = new System.Drawing.Point(192, 6);
+            this.cbbCategoryList.Name = "cbbCategoryList";
+            this.cbbCategoryList.Size = new System.Drawing.Size(326, 36);
+            this.cbbCategoryList.TabIndex = 23;
+            this.cbbCategoryList.SelectedIndexChanged += new System.EventHandler(this.cbbCategoryList_SelectedIndexChanged);
             // 
             // panel3
             // 
@@ -222,19 +243,6 @@ namespace PetStoreManagement
             this.gridProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // picBoxNoItemsFound
-            // 
-            this.picBoxNoItemsFound.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBoxNoItemsFound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoItemsFound.Image")));
-            this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 50);
-            this.picBoxNoItemsFound.Name = "picBoxNoItemsFound";
-            this.picBoxNoItemsFound.Size = new System.Drawing.Size(710, 308);
-            this.picBoxNoItemsFound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxNoItemsFound.TabIndex = 11;
-            this.picBoxNoItemsFound.TabStop = false;
-            this.picBoxNoItemsFound.Visible = false;
-            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -299,6 +307,19 @@ namespace PetStoreManagement
             this.Select.Name = "Select";
             this.Select.Width = 58;
             // 
+            // picBoxNoItemsFound
+            // 
+            this.picBoxNoItemsFound.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picBoxNoItemsFound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoItemsFound.Image")));
+            this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 50);
+            this.picBoxNoItemsFound.Name = "picBoxNoItemsFound";
+            this.picBoxNoItemsFound.Size = new System.Drawing.Size(710, 308);
+            this.picBoxNoItemsFound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxNoItemsFound.TabIndex = 11;
+            this.picBoxNoItemsFound.TabStop = false;
+            this.picBoxNoItemsFound.Visible = false;
+            // 
             // CashProduct
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -339,5 +360,6 @@ namespace PetStoreManagement
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Select;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbCategoryList;
     }
 }

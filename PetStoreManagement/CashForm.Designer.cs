@@ -125,7 +125,7 @@ namespace PetStoreManagement
             this.gridCash.RowHeadersVisible = false;
             this.gridCash.RowTemplate.Height = 30;
             this.gridCash.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridCash.Size = new System.Drawing.Size(814, 218);
+            this.gridCash.Size = new System.Drawing.Size(814, 256);
             this.gridCash.TabIndex = 8;
             this.gridCash.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridCash.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -384,7 +384,7 @@ namespace PetStoreManagement
             this.picBoxNoItemsFound.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNoItemsFound.Image")));
             this.picBoxNoItemsFound.Location = new System.Drawing.Point(0, 49);
             this.picBoxNoItemsFound.Name = "picBoxNoItemsFound";
-            this.picBoxNoItemsFound.Size = new System.Drawing.Size(814, 218);
+            this.picBoxNoItemsFound.Size = new System.Drawing.Size(814, 256);
             this.picBoxNoItemsFound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxNoItemsFound.TabIndex = 9;
             this.picBoxNoItemsFound.TabStop = false;
@@ -393,7 +393,7 @@ namespace PetStoreManagement
             // CashForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(814, 267);
+            this.ClientSize = new System.Drawing.Size(814, 305);
             this.Controls.Add(this.picBoxNoItemsFound);
             this.Controls.Add(this.gridCash);
             this.Controls.Add(this.panel2);

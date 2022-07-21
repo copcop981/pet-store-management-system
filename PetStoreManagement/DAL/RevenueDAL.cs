@@ -61,5 +61,61 @@ namespace PetStoreManagement.DAL
 
             return revenueList;
         }
+
+        internal List<RevenueDTO> filterRevenueByDate(string startDay, string endDay)
+        {
+            conn = new SqlConnection(dbConn.connection());
+            List<RevenueDTO> revenueList = new List<RevenueDTO>();
+
+            SqlCommand command = new SqlCommand("select * from dbo.Revenue where Date_Time between '" + startDay + "' and DATEADD(day, 1, '" + endDay + "')", conn);
+            conn.Open();
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                RevenueDTO revenue = new RevenueDTO();
+                revenue.Id = (int)reader[0];
+                revenue.Date_Time = (DateTime)reader[1];
+                revenue.Transaction_No = (string)reader[2];
+                revenue.Product_Name = (string)reader[3];
+                revenue.Quantity = (int)reader[4];
+                revenue.Price = (int)reader[5];
+                revenue.Total = (int)reader[6];
+                revenue.Payer = (string)reader[7];
+
+                revenueList.Add(revenue);
+            }
+            reader.Close();
+            conn.Close();
+            return revenueList;
+        }
+
+        internal List<RevenueDTO> filterProductByDate(string year, string month, string day, string search)
+        {
+            conn = new SqlConnection(dbConn.connection());
+            List<RevenueDTO> revenueList = new List<RevenueDTO>();
+
+            SqlCommand command = new SqlCommand($"select * from dbo.Revenue where Transaction_No like '%{year}{month}{day}%' and Product_Name like '%{search}%'", conn);
+            conn.Open();
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                RevenueDTO revenue = new RevenueDTO();
+                revenue.Id = (int)reader[0];
+                revenue.Date_Time = (DateTime)reader[1];
+                revenue.Transaction_No = (string)reader[2];
+                revenue.Product_Name = (string)reader[3];
+                revenue.Quantity = (int)reader[4];
+                revenue.Price = (int)reader[5];
+                revenue.Total = (int)reader[6];
+                revenue.Payer = (string)reader[7];
+
+                revenueList.Add(revenue);
+            }
+            reader.Close();
+            conn.Close();
+            return revenueList;
+        }
     }
 }

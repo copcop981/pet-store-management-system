@@ -90,7 +90,7 @@ namespace PetStoreManagement
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(754, 75);
+            this.panel1.Size = new System.Drawing.Size(814, 75);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -112,7 +112,7 @@ namespace PetStoreManagement
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(754, 180);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(814, 218);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // guna2GradientPanel2
@@ -123,7 +123,7 @@ namespace PetStoreManagement
             this.guna2GradientPanel2.Controls.Add(this.label5);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(136)))), ((int)(((byte)(247)))));
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(229)))), ((int)(((byte)(226)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(191, 36);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(213, 55);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(182, 107);
             this.guna2GradientPanel2.TabIndex = 11;
@@ -175,7 +175,7 @@ namespace PetStoreManagement
             this.guna2GradientPanel4.Controls.Add(this.label9);
             this.guna2GradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(136)))), ((int)(((byte)(247)))));
             this.guna2GradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(229)))), ((int)(((byte)(226)))));
-            this.guna2GradientPanel4.Location = new System.Drawing.Point(567, 36);
+            this.guna2GradientPanel4.Location = new System.Drawing.Point(619, 55);
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
             this.guna2GradientPanel4.Size = new System.Drawing.Size(184, 107);
             this.guna2GradientPanel4.TabIndex = 9;
@@ -268,7 +268,7 @@ namespace PetStoreManagement
             this.guna2GradientPanel3.Controls.Add(this.label7);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(136)))), ((int)(((byte)(247)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(229)))), ((int)(((byte)(226)))));
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(379, 36);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(416, 55);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(182, 107);
             this.guna2GradientPanel3.TabIndex = 10;
@@ -328,7 +328,7 @@ namespace PetStoreManagement
             this.guna2GradientPanel1.Controls.Add(this.label2);
             this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(136)))), ((int)(((byte)(247)))));
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(229)))), ((int)(((byte)(226)))));
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(3, 36);
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(10, 55);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(182, 108);
             this.guna2GradientPanel1.TabIndex = 8;
@@ -382,7 +382,7 @@ namespace PetStoreManagement
             // Dashboard
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(754, 267);
+            this.ClientSize = new System.Drawing.Size(814, 305);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

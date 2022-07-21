@@ -64,6 +64,7 @@ namespace PetStoreManagement
             this.pbRole = new System.Windows.Forms.PictureBox();
             this.pbDateOfBirth = new System.Windows.Forms.PictureBox();
             this.pbPassword = new System.Windows.Forms.PictureBox();
+            this.chkbShowHide = new Guna.UI2.WinForms.Guna2CheckBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddress)).BeginInit();
@@ -192,7 +193,7 @@ namespace PetStoreManagement
             // 
             this.lblUid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblUid.AutoSize = true;
-            this.lblUid.Location = new System.Drawing.Point(12, 371);
+            this.lblUid.Location = new System.Drawing.Point(12, 400);
             this.lblUid.Name = "lblUid";
             this.lblUid.Size = new System.Drawing.Size(33, 20);
             this.lblUid.TabIndex = 15;
@@ -232,7 +233,7 @@ namespace PetStoreManagement
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(224, 362);
+            this.btnSave.Location = new System.Drawing.Point(224, 391);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(133, 38);
             this.btnSave.TabIndex = 18;
@@ -248,7 +249,7 @@ namespace PetStoreManagement
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(380, 362);
+            this.btnUpdate.Location = new System.Drawing.Point(380, 391);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(133, 38);
             this.btnUpdate.TabIndex = 19;
@@ -264,7 +265,7 @@ namespace PetStoreManagement
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(535, 362);
+            this.btnCancel.Location = new System.Drawing.Point(535, 391);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(133, 38);
             this.btnCancel.TabIndex = 20;
@@ -409,11 +410,31 @@ namespace PetStoreManagement
             this.pbPassword.TabIndex = 32;
             this.pbPassword.TabStop = false;
             // 
+            // chkbShowHide
+            // 
+            this.chkbShowHide.AutoSize = true;
+            this.chkbShowHide.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chkbShowHide.CheckedState.BorderRadius = 0;
+            this.chkbShowHide.CheckedState.BorderThickness = 0;
+            this.chkbShowHide.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chkbShowHide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkbShowHide.Location = new System.Drawing.Point(196, 348);
+            this.chkbShowHide.Name = "chkbShowHide";
+            this.chkbShowHide.Size = new System.Drawing.Size(142, 24);
+            this.chkbShowHide.TabIndex = 33;
+            this.chkbShowHide.Text = "Show Password";
+            this.chkbShowHide.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chkbShowHide.UncheckedState.BorderRadius = 0;
+            this.chkbShowHide.UncheckedState.BorderThickness = 0;
+            this.chkbShowHide.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chkbShowHide.CheckedChanged += new System.EventHandler(this.chkbShowHide_CheckedChanged);
+            // 
             // UserModule
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(727, 426);
+            this.ClientSize = new System.Drawing.Size(727, 455);
+            this.Controls.Add(this.chkbShowHide);
             this.Controls.Add(this.pbPassword);
             this.Controls.Add(this.pbDateOfBirth);
             this.Controls.Add(this.pbRole);
@@ -497,5 +518,6 @@ namespace PetStoreManagement
         private System.Windows.Forms.PictureBox pbPhone;
         private System.Windows.Forms.PictureBox pbAddress;
         private System.Windows.Forms.PictureBox pbName;
+        private Guna.UI2.WinForms.Guna2CheckBox chkbShowHide;
     }
 }
