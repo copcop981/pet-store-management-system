@@ -380,7 +380,7 @@ namespace PetStoreManagement
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(158, 45);
             this.btnProduct.TabIndex = 4;
-            this.btnProduct.Text = "Product";
+            this.btnProduct.Text = "Products";
             this.btnProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProduct.TextOffset = new System.Drawing.Point(10, 0);
             this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
@@ -407,7 +407,7 @@ namespace PetStoreManagement
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(158, 45);
             this.btnUser.TabIndex = 3;
-            this.btnUser.Text = "User";
+            this.btnUser.Text = "Users";
             this.btnUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUser.TextOffset = new System.Drawing.Point(10, 0);
             this.btnUser.Visible = false;

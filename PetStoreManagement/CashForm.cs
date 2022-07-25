@@ -15,6 +15,7 @@ namespace PetStoreManagement
 {
     public partial class CashForm : Form
     {
+        CustomerBLL cusBLL = new CustomerBLL();
         CashBLL cashBLL = new CashBLL();
         RevenueBLL revenueBLL = new RevenueBLL();
         string title = "Pet Store Management System";
@@ -52,6 +53,7 @@ namespace PetStoreManagement
 
             if (dlR == DialogResult.Yes)
             {
+                int customerId = 0;
                 getTransNo();
                 for (int i = 0; i < gridCash.Rows.Count; i++)
                 {
@@ -59,7 +61,6 @@ namespace PetStoreManagement
                     //cm = new SqlCommand("update dbo.Product set Pquantity = Pquantity - " + (int)gridCash.Rows[i].Cells[4].Value + " where Pid = " + (int)gridCash.Rows[i].Cells[1].Value, cn);
                     //cm.ExecuteNonQuery();
                     //cn.Close();
-
 
                     // GET CUSTOMER ID BY CUSTOMER NAME
                     //int customerId = -1;
@@ -72,7 +73,7 @@ namespace PetStoreManagement
                     //rd.Close();
                     //cn.Close();
                     string customerName = gridCash.Rows[i].Cells[7].Value.ToString();
-                    int customerId = cashBLL.getCusIdByCusName(customerName);
+                    customerId = cashBLL.getCusIdByCusName(customerName);
 
                     // INSERT NEW TO dbo.Cash
 
@@ -117,8 +118,10 @@ namespace PetStoreManagement
                     DateTime dateTime = DateTime.Now;
                     revenueBLL.storeRevenue(dateTime, transNo, pName, quantity, price, total, cashier);
                 }
+                // REMOVE THIS CUSTOMER AFTER PURCHASE
+                cusBLL.deleteCustomer(customerId);
 
-                // PRINT INVOICE
+                //PRINT INVOICE
                 InvoiceForm f = new InvoiceForm(ds, lblTotal.Text);
                 f.ShowDialog();
             }
