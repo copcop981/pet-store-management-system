@@ -1,0 +1,252 @@
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\Guna.UI2.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\EnvDTE.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\stdole.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.MSXML.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.csproj.AssemblyReference.cache
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.CashCustomer.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.CashForm.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.CashProduct.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.CustomerForm.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.CustomerModule.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.Dashboard.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.Form1.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.InvoiceForm.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.LoginForm.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.MainForm.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.ProductForm.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.ProductModule.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.Properties.Resources.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.UserForm.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.UserModule.resources
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.csproj.GenerateResource.cache
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\RdlCompile.cache
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\RdlCompile.compiled
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.csproj.CoreCompileInputs.cache
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.csproj.CopyComplete
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.exe
+D:\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.pdb
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\69024-bunifu_ui_v1.52.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\Guna.UI2.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\EnvDTE.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\stdole.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\Microsoft.MSXML.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.csproj.AssemblyReference.cache
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.CashCustomer.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.CashForm.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.CashProduct.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.CustomerForm.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.CustomerModule.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.Dashboard.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.Form1.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.InvoiceForm.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.LoginForm.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.MainForm.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.ProductForm.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.ProductModule.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.Properties.Resources.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.UserForm.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.UserModule.resources
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.csproj.GenerateResource.cache
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\RdlCompile.cache
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\RdlCompile.compiled
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.csproj.CoreCompileInputs.cache
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.csproj.CopyComplete
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.exe
+D:\IT\My Project\C# Winforms\pet-store-management-system\PetStoreManagement\obj\Debug\PetStoreManagement.pdb
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\69024-bunifu_ui_v1.52.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\Guna.UI2.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\EnvDTE.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\stdole.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\Microsoft.MSXML.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.csproj.AssemblyReference.cache
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.CashCustomer.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.CashForm.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.CashProduct.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.CustomerForm.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.CustomerModule.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.Dashboard.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.Form1.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.InvoiceForm.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.LoginForm.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.MainForm.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.ProductForm.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.ProductModule.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.Properties.Resources.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.UserForm.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.UserModule.resources
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.csproj.GenerateResource.cache
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\RdlCompile.cache
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\RdlCompile.compiled
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.csproj.CoreCompileInputs.cache
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.csproj.CopyComplete
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.exe
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.pdb
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\PetStoreManagement.exe.config
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\PetStoreManagement.exe
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\bin\Debug\PetStoreManagement.pdb
+D:\IT\My Project\C# Winforms\PetStoreManagement\PetStoreManagement\obj\Debug\PetStoreManagement.RevenueForm.resources
