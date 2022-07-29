@@ -50,7 +50,7 @@ insert dbo.Category values (N'All')
 insert dbo.Category values (N'Dog')
 insert dbo.Category values (N'Cat')
 insert dbo.Category values (N'Fish')
-insert dbo.Category values (N'Bỉrd')
+insert dbo.Category values (N'Bird')
 
 insert dbo.Product values (N'Betta', N'Betta', N'Fish', 300, 30000)
 insert dbo.Product values (N'Goldfish', N'Goldfish', N'Fish', 100, 20000)

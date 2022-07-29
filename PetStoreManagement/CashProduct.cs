@@ -50,10 +50,8 @@ namespace PetStoreManagement
             Load += CashProduct_Load;
         }
 
-        private void CashProduct_Load(object sender, EventArgs e)
+        void hideProductsReadyToBuy()
         {
-            cbbCategoryList.SelectedIndex = 0;
-
             //foreach (DataGridViewRow row1 in cashForm.gridCash.Rows)
             //foreach (DataGridViewRow row2 in gridProduct.Rows)
 
@@ -73,6 +71,13 @@ namespace PetStoreManagement
                     //    gridProduct.Rows[j].Visible = true;
                 }
             }
+        }
+
+        private void CashProduct_Load(object sender, EventArgs e)
+        {
+            cbbCategoryList.SelectedIndex = 0;
+
+            hideProductsReadyToBuy();
         }
 
         private void CashProduct_MouseDown(object sender, MouseEventArgs e)
@@ -104,17 +109,19 @@ namespace PetStoreManagement
                 if (cbbCategoryList.Text == "All")
                 {
                     loadProductList();
+
+                    hideProductsReadyToBuy();
                     return;
                 }
 
                 string cate = cbbCategoryList.Text;
                 List<ProductDTO> productList = categoryBLL.getProductByCategory(cate);
 
-                int i = 0;
+                int index = 0;
                 gridProduct.Rows.Clear();
                 foreach (ProductDTO product in productList)
                 {
-                    i++;
+                    index++;
                     int pId = product.Pid;
                     string pName = product.Pname;
                     string pType = product.Ptype;
@@ -122,8 +129,11 @@ namespace PetStoreManagement
                     int pQuantity = product.Pquantity;
                     int pPrice = product.Pprice;
 
-                    gridProduct.Rows.Add(i, pId, pName, pType, pCategory, pQuantity, pPrice);
+                    gridProduct.Rows.Add(index, pId, pName, pType, pCategory, pQuantity, pPrice);
                 }
+
+                hideProductsReadyToBuy();
+
                 if (gridProduct.Rows.Count == 0)
                     picBoxNoItemsFound.Visible = true;
                 else
@@ -208,7 +218,11 @@ namespace PetStoreManagement
                 List<CategoryDTO> cateList = categoryBLL.getAllCategory();
                 cbbCategoryList.Items.Clear();
                 foreach (CategoryDTO cate in cateList)
+                {
                     cbbCategoryList.Items.Add(cate.Name);
+
+                    
+                }
             }
             catch (Exception ex)
             {

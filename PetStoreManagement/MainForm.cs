@@ -47,7 +47,10 @@ namespace PetStoreManagement
             {
                 int result = mainBLL.cleanJunkData();
                 if (result > 0)
+                {
                     MessageBox.Show("Junk Data has been Successfully Cleaned Up!", title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
                 else
                     MessageBox.Show("There's No Junk Data!", title, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

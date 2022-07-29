@@ -115,6 +115,7 @@ namespace PetStoreManagement
             // 
             // btnClean
             // 
+            this.btnClean.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClean.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClean.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnClean.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

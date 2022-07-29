@@ -121,7 +121,7 @@
   <data name="resource.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
-        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAA3SAAAN0gFvkv6OAAAAGXRFWHRTb2Z0d2FyZQB3d3cu
+        HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAAA3RAAAN0QHCK9/jAAAAGXRFWHRTb2Z0d2FyZQB3d3cu
         aW5rc2NhcGUub3Jnm+48GgAASJxJREFUeF7t3XegHWW19/GXLorYy1XvtRKqNEVQEURRpIhYEURQQEFA
         egIkkEDCQUVQUbwWEhIglFBCgICAgID0ItI7JEG9yFUvp/cz75rNmbiz8zs5u0x5nme+f3wILsmeOVPW
         b529Z8/8vyiKgNLY+sYXtzPHmLlmvplhvmZepf57AAiVLAKhsYD/qLnNRGN4wXzLrKz+PgCERhaBkFio
@@ -438,7 +438,7 @@
   <data name="btnClean.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADdIAAA3SAW+S/o4AAFxYSURBVHhe7d13wC1FfT7wX0SQ
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADdEAAA3RAcIr3+MAAFxYSURBVHhe7d13wC1FfT7wX0SQ
         oqAoqLEjarDGEnssWFHAmmiMjdgbduwFRSM2rFgR7BqxF9RYg6JgVxQ1aFBRQVSKCqKQ/J7nwt577nmf
         933nuzuzO7v7/PExOrnvzu7snPl+z57Zmf/3f//3f51scfjxZrW7OOwPR8CJ8Hs4Eg6Ga4P6G7PqqTHZ
         LJUsjFCd0qwSF4Cnwmnwf6s4Fw6DnUAdw6xaakw2SyULI1SnNKvEa0EFfeVbsD2o45hVSY3JZqlkYYTq
@@ -1876,7 +1876,7 @@
   <data name="resource.Image3" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADr8AAA6/ATgFUyQAADZBSURBVHhe7d15nC1Fef9xWZXd
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADr4AAA6+AepCscAAADZBSURBVHhe7d15nC1Fef9xWZXd
         KKIgoEKUIPxccEEUFDAEN4xBECOgQpSfSxITzU+MGkPEheSXhIi4YExUQgwxKLhGwRURo4IKgiirS4Ls
         q3CBC5d8n2HucObMd2bO0l1dVf354/3yxeOdc7qrqut5zjndVffZ6dt7A8jb2rK5PEb2kv3lMHmjvEve
         Lx+XT8tpcqacJRfJpXLdkDvk7iERG/538bcXSrxWvGa8drxHvFe8Z7x3HEMcSxxTHFscYxzrWuLOBQ26
